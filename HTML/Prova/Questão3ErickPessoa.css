@@ -1,0 +1,37 @@
+* {
+    text-decoration: none;
+}
+
+h1 {
+    color: white;
+    position: relative;
+    bottom: 150px;
+    left: 13px;
+}
+
+.Link {
+    background-color: black;
+    color: white;
+    width: 200px;
+    
+}
+.Link2{
+position: relative;
+bottom: 150px;
+}
+a{
+    color: white;
+    
+}
+
+.Foto {
+    text-align: justify;
+    width: 500px;
+    height: 100px;
+    text-align: center;
+    background-color: black;
+}
+p{
+    font-family: sans-serif;
+    text-align: justify;
+}

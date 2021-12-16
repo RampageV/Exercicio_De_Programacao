@@ -1,0 +1,139 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.home {
+    padding: 12px;
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+
+
+}
+
+.home a {
+    text-decoration: none;
+    color: white;
+}
+
+.home a:hover {
+    color: #808080;
+}
+
+.portfolio {
+    position: relative;
+    top: 100px;
+    bottom: 100px;
+}
+
+.portfolio h1 {
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.portfolio p {
+
+    position: relative;
+    padding: 0px 150px 0px 150px;
+    font-size: 20px;
+    line-height: 2;
+    color: #808080;
+}
+
+.trêsfotos {
+    position: relative;
+    text-align: center;
+    top: 200px;
+
+}
+
+.gallery-card {
+    padding: 10px;
+}
+
+.gallery-title {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-family: sans-serif;
+    font-size: 20px;
+}
+
+.gallery-text {
+    position: relative;
+    bottom: 15px;
+    text-align: center;
+    color: #A9A9A9;
+}
+
+.penultimo {
+    position: relative;
+    top: 260px;
+}
+
+.about {
+    width: 900px;
+    height: 410px;
+    background-color: #013B53;
+    color: white;
+    padding: 50px;
+}
+
+.about h2 {
+    font-size: 40px;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+}
+
+.about p {
+    text-align: left;
+    padding: 0px 450px 0px 0px;
+
+}
+
+#contact {
+    text-transform: uppercase;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+    color: #013B53;
+    padding: 20px;
+}
+
+.maps {
+    position: relative;
+    top: 300px;
+}
+
+.rodape {
+    position: relative;
+    top: 40px;
+    color: #15282E;
+    padding: 15px;
+    background-color: #001018;
+}
+
+/*A media é muito importante na hora que você deseja reajusta os elemento de tamanho dependendo em qual aparelho vai ser visualizado*/
+@media (max-width: 600px) {
+
+    .ModeloFeminino,
+    .trêsfotos,
+    .modelos {
+        width: 100%;
+    }
+
+    .about {
+        width: 80%;
+    }
+    .about h2{
+        width: 100%;
+    }
+    .about p{
+        width: 100%;
+    }
+
+    .MapDoSite{
+        width: 100%;
+    }
+}

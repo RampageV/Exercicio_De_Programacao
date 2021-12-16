@@ -1,0 +1,30 @@
+* {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h1 {
+    color: #3D3D3D;
+    background-color: #E1EDF2;
+    padding: 10px;
+}
+
+h2,
+h3 {
+    position: relative;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.Figura {
+
+    background-color: whitesmoke;
+    color: lightgrey;
+    padding: 15px;
+    margin: 10px;
+}
+
+.paragrafo {
+    text-align: justify;
+    width: 940px;
+    margin: 30px;
+}

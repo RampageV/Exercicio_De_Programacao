@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        input[name="Numero"] {
+            position: relative;
+            width: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="#" method="GET">
+        <fieldset>
+            <legend>
+                <h3>Formulário Pessoal</h3>
+            </legend>
+            <label for="Nome">Nome completo:</label>
+            <input type="text" name="Nome" id="Nome" placeholder="Nome Completo">
+            <br>
+            <br>
+            <label for="Sexo">Sexo</label>
+            <input type="radio" name="Sexo" value="Masculino" checked="checked">Masculino
+            <input type="radio" name="Sexo" value="Feminino">Feminino
+            <br>
+            <br>
+            <label for="endereço">Endereço:</label>
+            <input type="text" name="endereço" id="endereço" placeholder="Endereço completo">
+            <label for="Numero">Nº:</label>
+            <input type="text" name="Numero" id="Numero">
+            <br>
+            <br>
+            <label for="Complemento">Complemento:</label>
+            <input type="text" name="Complemento" id="Complemento" placeholder="Completo">
+            <br>
+            <br>
+            <label for="cep">CEP:</label>
+            <input type="text" name="cep" id="cep" placeholder="Número do CEP">
+            <br>
+            <br>
+            <label for="Cidade">Cidade:</label>
+            <select name="Cidade">
+                <option value="JoãoPessoa">João Pessoa</option>
+                <option value="SãoPaulo">São Paulo</option>
+                <option value="RiodeJaneiro">Rio de Janeiro</option>
+            </select>
+            <label for="Estado">Estado:</label>
+            <select name="Estado">
+                <option value="JoãoPessoa">PB</option>
+                <option value="SãoPaulo">SP</option>
+                <option value="RiodeJaneiro">RJ</option>
+            </select>
+        </fieldset>
+    </form>
+</body>
+
+</html>

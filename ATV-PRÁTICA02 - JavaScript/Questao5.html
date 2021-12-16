@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 5</title>
+</head>
+
+<body>
+    <label for="numero">Digita as idades:</label>
+    <input type="text" id="idade" placeholder="Digite as idades">
+    <button onclick="MaiorDeIdade()">Enviar</button>
+
+    <p id="RespostaDasIdades"></p>
+    <script>
+        function MaiorDeIdade() {
+            // Contador do maior número e menor numero que vai ser utilizado.
+            var MaiorDeIdade = 0;
+            var MenorDeIdade = 0;
+
+            // Foi selecionado o valor do id #idade e amazenado esse valor na variável input.
+            var input = document.querySelector('#idade').value;
+
+            // Na variável numero foi amazenado o valor do input, e fazendo ele ser separado por virgula com split,
+            // fazendo assim ser criando um array, e esse array se torna um objeto,mas dentro desse objeto que fica 
+            // os número, esse numero é tratado como string, então vai ser necessário converter esse conteúdo dentro 
+            // do array, usando o map, o map ele pego o que está dentro do array que é o item e converter em int ou floar
+            // que você queira.
+            var numero = input.split(",").map(item => parseInt(item));
+
+            // Aqui a gente cria um comando de repetição do indeci até o máximo que vai ser os valores dentro do array
+            for (i = 0; i < numero.length; i++) {
+
+                // Aqui o numero vai pecorre e procura se tem algum numero maior que 18.
+                if (numero[i] >= 18) {
+                    // Caso tenho o número maior que 18 vai adicionar no contador
+                    MaiorDeIdade++;
+
+                } else {
+                    // Caso não tenho, vai ser colocado nesse contador.
+                    MenorDeIdade++;
+                }
+            }
+
+            // Aqui serve para mostra na tela do usuário.
+            document.getElementById('RespostaDasIdades').innerHTML = "Quantidade de maiores de idade são " +
+                MaiorDeIdade + "<br>" + "Quantidade de menores: " + MenorDeIdade;
+
+        }
+    </script>
+</body>
+
+</html>

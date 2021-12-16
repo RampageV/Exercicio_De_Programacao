@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 3</title>
+</head>
+
+<body>
+
+    <label for="numero">Digite numeros:</label>
+    <input type="text" id="numero" placeholder="Digite os números">
+    <button onclick="MaiorNumeroDeTodos()">Enviar</button>
+
+    <p id="RespostaDoMaiorNumero"></p>
+
+    <script>
+        function MaiorNumeroDeTodos() {
+            // Aqui está pegando o valor do id #numero e colocando no input.
+            var input = document.querySelector('#numero').value;
+
+            // Aqui está pegando esse valor do input e dividindo em por virgula, assim criando um array, depois cada item desse array a gente está convertendo em número inteiro
+            numero = input.split(",").map(item => parseInt(item));
+
+            // Aqui estou pegando o numero do indice 0 e colocando na variavel MaiorNumero para depois comparar ele.
+            var MaiorNumero = numero[0];
+            var menor = numero[0];
+            // Aqui foi criado um for do indice 1 até o indice final que é o numero.length.
+            for (i = 1; i < numero.length; i++) {
+                //se o numero[i] que é o numero pecorrido for maior que o MaiorNumero, o MaiorNumero vai receber o numero pecorrido que é o numero[i]
+                if (numero[i] > MaiorNumero) {
+                    MaiorNumero = numero[i];
+                }
+                if (numero[i] < menor) {
+                    menor = numero[i];
+                }
+            }
+            // Esse getElementById().innerHTML, vai mostra o numero que está dentro da variavel MaiorNumero 
+            document.getElementById('RespostaDoMaiorNumero').innerHTML =
+                "Maior numero: " + MaiorNumero + "<br>" + "Menor numero: " + menor;
+
+
+        }
+    </script>
+
+
+
+
+
+</body>
+
+</html>

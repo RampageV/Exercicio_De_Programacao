@@ -1,0 +1,30 @@
+h1 {
+    color: coral;
+    letter-spacing: 2px;
+    /* Ele é o espaçamento entre os caracteres.*/
+    text-transform: capitalize;
+    /* text-transform: serve para transformar  a letra em minuscula ou primeira letra de cada palavra maiuscula com capitalize. */
+    width: 650px;
+    /* Lagura do texto.*/
+    text-shadow: 1px 1px black;
+    /* Efeito de sombra no texto. 1px quantidade de sobra na horizontal, 1px quantidade na vertical e se tiver um terceiro, será um desfoque.*/
+}
+
+.p1 {
+    /* text-indent: 50px;  Serve como primeiro paragrafo de um texto, ele cria um espaço para começa o texto. */
+    width: 650px;
+    /* Lagura do texto.*/
+    text-align: justify;
+    /* Serve para centralizar o texto ou deixar ele por lado esquerdo ou direito.*/
+}
+
+p {
+    width: 650px;
+    /* Lagura do texto.*/
+    text-align: justify;
+    /* Serve para centralizar o texto ou deixar ele por lado esquerdo ou direito: center, rigth etc*/
+    font-size: 18px;
+    /* Tamanho da fonto das palavras.*/
+    font-family: 'Open Sans', sans-serif;
+    /* Tipo de fonte que vai ser utilizado*/
+}

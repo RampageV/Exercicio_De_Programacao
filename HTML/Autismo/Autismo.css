@@ -1,0 +1,1011 @@
+* {
+    margin: 0;
+    /* As páginas começa sempre com 8px, com esse comando faz retirar isso.*/
+    padding: 0;
+    /* As páginas começa sempre com 8px, com esse comando faz retirar isso.*/
+    text-decoration: none;
+    /* Quando cria um <a> que é tag de link, não vai ter aquela barra embaixo do link*/
+}
+
+.Menu {
+    position: relative;
+    background-color: #F7DDB2;
+    border-bottom: 1px solid silver;
+    width: 100%;
+}
+
+h1 {
+    margin-top: 20px;
+    text-transform: uppercase;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 40px;
+    width: 300px;
+    height: 80px;
+    text-align: center;
+    background: linear-gradient(to left, #F78B1E, #E20400, #EDCF00, #2691C2, #298E14);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    letter-spacing: 2px;
+}
+
+.BILU {
+    background: linear-gradient(to left, #DFDE0A, #3538A3, #3678AA, #D8000C);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    border: 1px solid white;
+    padding: 6px;
+    border-radius: 20px;
+    color: white;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.IconFaceInstTwitt {
+    font-size: 20px;
+    position: absolute;
+    top: 15px;
+    left: 150px;
+}
+
+.fab {
+    color: white;
+    margin: 0px 7px 0px 7px;
+}
+
+.fab[ class="fab fa-instagram"] {
+    background: linear-gradient(to bottom, #3592E0, #763DB6, #AA3694, #E58FB7, #DA306D, #ED4F48, #F66B2E);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.fab[class="fab fa-facebook"] {
+    color: #3C5A98;
+}
+
+.fab[class="fab fa-twitter-square"] {
+    color: #00ACEE;
+}
+
+.fas {
+    color: darkgray;
+    /*cor da imamge*/
+    font-size: 50px;
+    /* tamanho da imagem*/
+    position: absolute;
+    /* A posição do site no começo é static precisamos mudar para absolute ou relativo para poder move os elementos.*/
+    right: 5px;
+    top: 5px;
+}
+
+.EntradaCadastro {
+    height: 60px;
+    font-size: 18px;
+    position: relative;
+    width: 100%;
+}
+
+.Cadastro {
+    position: relative;
+    color: slategrey;
+    border: 2px solid white;
+    border-radius: 15px;
+    padding: 0px 2px 0px 2px;
+    left: 88.5%;
+    top: 3px;
+}
+
+.Entrar {
+    color: slategrey;
+    position: relative;
+    border: 2px solid white;
+    border-radius: 15px;
+    padding: 0px 11px 0px 11px;
+    left: 88.5%;
+    top: 10px;
+}
+
+a[class="Cadastro"]:hover {
+    color: white;
+}
+
+a[class="Entrar"]:hover {
+    color: white;
+}
+
+.DownloadContatosQuemSomosPart1 {
+    height: 20px;
+    background-color: #FAEBD7;
+    position: relative;
+    border: 1px solid #708090;
+    width: 100%;
+}
+
+.DownloadContatosQuemSomosPart2 {
+    color: #708090;
+    margin: 1.8%;
+    position: relative;
+    left: 67%;
+    width: 100%;
+}
+
+.DownloadContatosQuemSomosPart2:hover {
+    color: #DCDCDC;
+}
+
+.Main1 {
+    display: block;
+    background-color: white;
+    border: 5px solid #F0F8FF;
+    border-radius: 20px;
+    overflow: hidden;
+    width: 70%;
+    top: 70px;
+    left: 200px;
+    height: 1150px;
+    position: relative;
+
+}
+
+.h1 {
+    font-size: 2.5em;
+    font-family: 'Linux Libertine', 'Georgia', 'Times', serif;
+}
+
+.Main2 {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    width: 800px;
+    text-align: justify;
+    font-family: opensans, helvetica, arial, sans-serif;
+    background-color: #F8F8FF;
+    color: black;
+
+}
+
+.Main2 a {
+
+    position: relative;
+    margin-left: 50px;
+    top: 60px;
+    letter-spacing: 2px;
+    /* separa os caracteres.*/
+}
+
+#História {
+    color: white;
+    background-color: #DB0A06;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 10px;
+    border: 0;
+}
+
+#História:hover {
+    opacity: 0.8;
+}
+
+#Características {
+    color: white;
+    background-color: #F3881D;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 10px;
+    border: 0;
+}
+
+#Características:hover {
+    opacity: 0.8;
+}
+
+#Diagnóstico {
+    color: white;
+    background-color: #298E14;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 10px;
+    border: 0;
+}
+
+#Diagnóstico:hover {
+    opacity: 0.8;
+}
+
+#Tratamentos {
+    color: white;
+    background-color: #1C9AD4;
+    opacity: 1;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 10px;
+    border: 0;
+}
+
+#Tratamentos:hover {
+    opacity: 0.8;
+}
+
+.DiaDoAutismo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 150px;
+}
+
+.rodape {
+    text-align: right;
+    padding: 11px;
+    height: 10px;
+    background: linear-gradient(to left, #F78B1E, #E20400, #EDCF00, #2691C2, #298E14);
+}
+
+.rodape p {
+    font-size: 10px;
+    color: white;
+    z-index: 1;
+}
+
+/* Daqui para cima vai é a página principal, daqui para baixo vai ser a história*/
+
+.historia {
+
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #FFFAF0;
+    border: 5px solid #F8F8FF;
+    border-radius: 20px;
+    overflow: hidden;
+    width: 70%;
+    top: 70px;
+    height: 3930px;
+    position: relative;
+}
+
+
+.Texto0 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 30px;
+    color: #696969;
+    width: 700px;
+
+
+}
+
+.circulo1 {
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    color: #A9A9A9;
+    background-color: #F7DDB2;
+    border: 5px solid #FFEFD5;
+    border-radius: 50%;
+    float: left;
+    margin: 0px 40px 0px 10px;
+}
+
+.text1 {
+    font-family: 'Montserrat', Helvetica, Arial, Lucida, sans-serif;
+    text-align: justify;
+    width: 870px;
+
+}
+
+.circulo50e60 {
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    font-size: 18px;
+    color: #A9A9A9;
+    background-color: #F7DDB2;
+    border: 5px solid #FFEFD5;
+    border-radius: 50%;
+    float: left;
+    margin: 0px 40px 0px 10px;
+
+}
+
+.text50e60 {
+    font-family: 'Montserrat', Helvetica, Arial, Lucida, sans-serif;
+    text-align: justify;
+    width: 870px;
+}
+
+/* Daqui pra baixo só a página de característica*/
+.característica {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #FFFAF0;
+    border: 8px solid #F8F8FF;
+    border-radius: 20px;
+    overflow: hidden;
+    width: 70%;
+    top: 70px;
+    height: 730px;
+    position: relative;
+    padding: 5px;
+
+}
+
+.Titulocaracterística {
+    width: 100%;
+
+
+}
+
+.CaractTexto1 {
+    font-size: 20px;
+    text-align: justify;
+
+}
+
+.CaractTexto2 {
+    font-family: 'Montserrat', Helvetica, Arial, Lucida, sans-serif;
+    text-align: justify;
+    width: 870px;
+    display: block;
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+/* Daqui para baixo diagnostico*/
+
+.diagnostico {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #FFFAF0;
+    border: 8px solid #F8F8FF;
+    border-radius: 20px;
+    overflow: hidden;
+    width: 70%;
+    top: 70px;
+    height: 780px;
+    position: relative;
+    padding: 5px;
+}
+
+.DiagnoText1 {
+    font-size: 20px;
+    text-align: justify;
+}
+
+/* Daqui para baixo, tratamento*/
+.tratamento {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #FFFAF0;
+    border: 8px solid #F8F8FF;
+    border-radius: 20px;
+    overflow: hidden;
+    width: 70%;
+    top: 70px;
+    height: 700px;
+    position: relative;
+    padding: 5px;
+}
+
+.TrataText {
+    font-size: 20px;
+    text-align: justify;
+}
+
+/* Daqui para baixo vai ser sobre cadastro*/
+.AutismoCadastro {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    background: white;
+    box-shadow: 1px 1px 5px black;
+    border-radius: 20px;
+    overflow: hidden;
+    width: 40%;
+    top: 70px;
+    height: 550px;
+    position: relative;
+
+}
+
+.boxCadastro {
+    margin-left: 30px;
+}
+
+.AutismoCadastro {
+    color: rgb(126, 121, 121);
+}
+
+.AutismoCadastro h2 {
+    background-color: coral;
+    font-size: 30px;
+    padding: 5px;
+    color: white;
+    box-shadow: 1px 1px 5px black;
+    font-family: sans-serif;
+}
+
+
+label[for="NomeCadastro"],
+[for="SexoCadastro"],
+[for="EmailCadastro"],
+[for="SenhaCadastro"],
+[for="ConfirmarSenhaCadastro"] {
+    display: block;
+    font-size: 20px;
+
+}
+
+input[id="NomeCadastro"],
+[id="EmailCadastro"],
+[id="SenhaCadastro"],
+[id="ConfirmarSenhaCadastro"] {
+    outline: 0;
+    border: ridge;
+    border-radius: 5px;
+    width: 250px;
+    padding: 5px;
+    height: 25px;
+}
+
+button[type="submit"] {
+    outline: 0;
+    color: white;
+    background-color: coral;
+    font-size: 15px;
+    padding: 7px;
+    border-radius: 10px;
+    width: 100px;
+    height: 35px;
+    text-align: center;
+    border: 0;
+}
+
+.AutismoCadastro a {
+    outline: 0;
+    color: white;
+    background-color: coral;
+    font-size: 15px;
+    padding: 9px;
+    border-radius: 10px;
+
+}
+
+/* Aqui pra baixo vai ser o login/entrada */
+.login {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 20px;
+    width: 38%;
+    top: 5px;
+    height: 715px;
+    position: relative;
+}
+
+.boxlogin {
+    background-color: #FFFAF0;
+    width: 300px;
+    margin: auto;
+    margin-top: 6%;
+    padding: 100px;
+    border-radius: 20px;
+    box-shadow: 1px 1px 5px black;
+
+}
+
+.PainelGerenciador {
+    text-align: center;
+}
+
+.ImagemEntradaIcone {
+    width: 110px;
+    padding: 10px;
+    border-radius: 30px;
+    box-shadow: 1px 1px 5px black;
+    margin-bottom: 30px;
+
+}
+
+#PainelDeControle {
+    font-size: 30px;
+    color: red;
+    margin-bottom: 10px;
+    font-family: sans-serif;
+}
+
+
+label[for="senhaLogin"],
+[for="lembrese"],
+[for="emailLogin"] {
+    width: 100%;
+    color: rgb(126, 121, 121);
+    display: block;
+}
+
+input[id="emailLogin"],
+[id="senhaLogin"] {
+    border-radius: 5px;
+    outline: 0;
+    /* Serve para tira uma borda do input que tem uma outra cor*/
+    width: 100%;
+    height: 25px;
+    padding: 5px;
+    border: ridge;
+}
+
+button[id="Acessar"] {
+    margin-top: 50px;
+    color: white;
+    background-color: orangered;
+    width: 105%;
+    border-radius: 30px;
+    border: 0px;
+    outline: 0px;
+}
+
+a[id="CadastroDoLogin"] {
+    position: absolute;
+    right: 100px;
+    bottom: 177px;
+    color: rgb(126, 121, 121);
+}
+
+/* Daqui para baixo é a página de download*/
+.AutismoDownload {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    background: white;
+    box-shadow: 1px 1px 5px black;
+    border-radius: 20px;
+    overflow: hidden;
+    width: 49%;
+    top: 70px;
+    height: 680px;
+    position: relative;
+}
+
+.BoxDownload table td li {
+    font-size: 20px;
+    text-align: left;
+}
+
+.BoxDasLinhas {
+    background-color: #ccc;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    padding: 5px;
+    font-size: 25px;
+
+}
+
+.BoxDownload {
+    display: block;
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 55px;
+    text-align: center;
+    font-size: 20px;
+
+}
+
+.Linha1Download {
+    padding: 10px;
+    font-size: 35px;
+    background-color: coral;
+    color: white;
+    font-family: sans-serif;
+    text-shadow: 1px 1px 5px black;
+}
+
+.LinkDownloadEclipse:hover {
+    text-decoration: underline;
+}
+
+.BoxDownload p {
+    background: linear-gradient(to right, #F78B1E, #E20400, #EDCF00, #2691C2, #298E14);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font-size: 40px;
+}
+
+.BoxDownload img {
+    width: 560px;
+
+}
+
+/* Daqui para baixo a lista de contato*/
+.Contato {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    background: white;
+    box-shadow: 1px 1px 5px black;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 93%;
+    top: 70px;
+    height: 1000px;
+    position: relative;
+}
+
+.TituloAdministrador {
+    font-size: 50px;
+    height: 50px;
+    line-height: 50px;
+    background-color: coral;
+    color: white;
+    text-align: center;
+}
+
+.BoxContato {
+    background-color: white;
+}
+
+.BoxContato td {
+    text-align: center;
+    font-family: sans-serif;
+    width: 550px;
+    padding: 50px;
+}
+
+.BoxContato img {
+    border-radius: 20px;
+}
+
+.BoxContato p {
+    text-align: justify;
+    position: relative;
+    top: 15px;
+    
+    color: white;
+    -webkit-hyphens: auto;
+    /*Todos esses hyphens é para organizar as palavras*/
+    -ms-hyphens: auto;
+    hyphens: auto;
+}
+
+.BoxSuely {
+  
+    position: relative;
+    top: -4px;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: coral;
+    box-shadow: 1px 1px 5px black;
+    height: 650px;
+}
+
+.BoxTay {
+    
+    border-radius: 20px;
+    padding: 20px;
+    background-color: coral;
+    box-shadow: 1px 1px 5px black;
+    height: 650px;
+   
+}
+
+
+.BoxErick {
+    position: relative;
+    top: 16px;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: coral;
+    margin: 0px 0px 40px 0px;
+    box-shadow: 1px 1px 5px black;
+    height: 650px;
+}
+
+.RedesSociaosPessoais {
+    width: 30px;
+    margin: 5px;
+}
+
+/* Daqui para baixo é para quem somos */
+.QuemSomos {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    background: snow;
+    box-shadow: 1px 1px 5px black;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 75%;
+    top: 40px;
+    height: 850px;
+    position: relative;
+}
+
+.QuemSomos h2 {
+    font-family: sans-serif;
+    padding: 10px;
+    background-color: coral;
+    color: white;
+    font-size: 50px;
+}
+
+.BoxImagemAlunosADS {
+
+    border-radius: 20px;
+    background-color: snow;
+    margin: 2px;
+}
+
+.QuemSomos p {
+    text-align: justify;
+    color: black;
+    padding: 15px;
+}
+
+.frase {
+    position: relative;
+    left: 400px;
+}
+
+#ImagemADS {
+    box-shadow: 1px 1px 5px black;
+}
+
+@media (max-width: 600px) {
+
+    /*Home*/
+    .DownloadContatosQuemSomosPart2 {
+        left: 35%;
+    }
+
+    .Main2 {
+        width: 100%;
+
+    }
+
+    .Main1 {
+        left: 16%;
+        padding: 15px;
+    }
+
+    .Cadastro,
+    .Entrar {
+        left: 73%;
+    }
+
+    #História {
+        position: relative;
+        top: 3%;
+        left: 5%;
+    }
+
+    #Características {
+        position: relative;
+        top: 3%;
+        right: 5%;
+    }
+
+    #Tratamentos {
+        position: relative;
+        right: -5%;
+    }
+
+    .DiaDoAutismo {
+        width: 100%;
+    }
+
+    .ApagarNos600px {
+        display: none;
+    }
+
+}
+
+@media(max-width:567px) {
+
+    #História {
+        position: relative;
+        left: -10%;
+        top: 20px;
+    }
+
+    #Características {
+        position: relative;
+        left: 35%;
+    }
+
+    #Diagnóstico {
+        position: relative;
+        left: -15%;
+    }
+
+    #Tratamentos {
+        position: relative;
+        left: 35%;
+        top: 45px;
+    }
+}
+
+@media (max-width: 513px) {
+    .DownloadContatosQuemSomosPart2 {
+        left: 32%;
+
+    }
+
+    .Cadastro,
+    .Entrar {
+        left: 70%;
+    }
+}
+
+@media(max-width: 600px) and (min-width: 500px) {
+
+    /*Caracteristica*/
+    .Titulocaracterística {
+        width: 100%;
+    }
+
+    .característica {
+        width: 85%;
+        height: 75%;
+        padding: 6px;
+    }
+
+    .CaractTexto1,
+    .CaractTexto2 {
+        width: 90%;
+
+    }
+
+    /*Diagnóstico*/
+    .diagnostico {
+        width: 80%;
+        height: 100%;
+        padding: 10px;
+    }
+
+    /*Tratamento*/
+    .tratamento {
+        width: 85%;
+        height: 100%;
+        padding: 10px;
+    }
+
+    /*História*/
+    .historia {
+        width: 90%;
+        height: 100%;
+        padding: 18px;
+    }
+
+    .Texto0 {
+        text-align: justify;
+        width: 100%;
+        letter-spacing: -1px;
+    }
+
+    .text1 {
+        width: 100%;
+    }
+
+    /*Cadastro*/
+    .AutismoCadastro {
+        width: 70%;
+    }
+
+    /*Entrada/Login*/
+    .login {
+        width: 100%;
+
+    }
+
+    .boxlogin {
+        width: 40%;
+    }
+
+    /*Download*/
+    .AutismoDownload {
+        width: 95%;
+        height: 600px;
+    }
+
+    .BoxDownload {
+        position: relative;
+        right: 20px;
+    }
+
+    .Linha1Download {
+        font-size: 20px;
+    }
+
+    .BoxDasLinhas {
+        font-size: 2px;
+    }
+
+    .BoxDownload img {
+        width: 90%;
+    }
+
+    /*Contato*/
+
+    .Contato {
+        width: 465px;
+        right: 1%;
+        height: 100%;
+    }
+
+    .Contato td {
+        width: 100%;
+    }
+
+    .RedesSociaosPessoais {
+        width: 30px;
+    }
+
+    /*-----Suely ----*/
+
+    .ImagemDePerfilSuely {
+        width: 100%;
+    }
+
+    .BoxSuely {
+        width: 100px;
+        margin: -20px;
+        right: 27%;
+        height: 100%;
+        font-size: 10px;
+    }
+
+    /*-----Tay-------*/
+
+    .ImagemDePerfilTay {
+        width: 100%;
+    }
+
+    .BoxTay {
+        position: relative;
+        width: 100px;
+        height: 100%;
+        top: -48px;
+        right: 69%;
+        font-size: 10px;
+    }
+
+    /*-----Erick-------*/
+
+    .ImagemDePerfilErick {
+        width: 115%;
+    }
+
+    .BoxErick {
+        position: relative;
+        width: 105px;
+        height: 100%;
+        top: 14px;
+        right: 128%;
+        font-size: 10px;
+    }
+
+    /*Quem somos*/
+    .QuemSomos {
+        width: 90%;
+    }
+
+    .QuemSomos img{
+        width: 95%;
+    }
+    .frase strong{
+        position: relative;
+        text-align: center;
+       font-size: 80%;
+       right: 390px;
+      
+    }
+
+}

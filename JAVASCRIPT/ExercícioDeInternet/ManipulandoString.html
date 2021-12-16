@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <center>
+        <h1>Manipulação de String</h1>
+    </center>
+
+    <label for="nome">Seu nome:</label>
+    <input type="text" name="nome"><br><br>
+
+    <label for="sobrenome"> Sobrenome:</label>
+    <input type="text" name="sobrenome"><br><br>
+
+    <button onclick="NomeSobrenome()">Enviar</button>
+
+    <script>
+        function minhafuncao(){
+            // Selecionado pelo name e não mais pelo id.
+            var nome = document.querySelector("input[name='nome']").value;
+            var sobrenome = document.querySelector("input[name='sobrenome']").value;
+
+            alert(` Nome Completo: ${nome}  ${sobrenome}`);
+
+        }
+    </script>
+
+</body>
+
+</html>

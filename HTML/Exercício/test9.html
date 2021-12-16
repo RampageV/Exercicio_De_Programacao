@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .Dados {
+            position: relative;
+            width: 60%;
+            margin-left: 300px;
+            margin-top: -20px;
+        }
+
+        .Matrícula {
+            position: relative;
+            width: 60%;
+            margin-left: 300px;
+            margin-top: -20px;
+        }
+
+
+        .Serie {
+            position: relative;
+            top: -59px;
+        }
+
+        .Turno {
+            position: relative;
+            top: -40px;
+        }
+
+        label[for="Nome"],
+        [for="Data"],
+        [for="Mãe"],
+        [for="Pai"],
+        [for="Telefone"],
+        [for="Email"] {
+            width: 150px;
+            display: inline-block;
+            text-align: right;
+        }
+
+        .EnviarLimpar {
+            text-align: center;
+        }
+    </style>
+    <title>Escola</title>
+</head>
+
+<body background="Img/tarefa.jpg">
+
+    <h1 align="center">Escola virtual</h1>
+    <h2 align="center">Formulário de pré-matrícula</h2>
+
+    <form action="#" name="Formulário" method="POST">
+
+        <fieldset class="Dados">
+            <legend>
+                <h3>Dados pessoais</h3>
+            </legend>
+
+            <label for="Nome">Nome do Aluno(a)</label>
+            <input type="text" id="Nome">
+            <br>
+            <label for="Data">Data de nascimento</label>
+            <input type="date" id="Data">
+            <br>
+            <label for="Mãe">Nome da mãe:</label>
+            <input type="text" id="Mãe">
+            <br>
+            <label for="Pai">Nome do pai:</label>
+            <input type="text" id="Pai">
+            <br>
+            <label for="Telefone">Telefone:</label>
+            <input type="text" id="Telefone" placeholder="(xx) x xxxx - xxxx">
+            <br>
+            <label for="Email">E-mail:</label>
+            <input type="text" id="Email" placeholder="nome@email.com">
+            <br>
+
+
+        </fieldset>
+        <br>
+        <fieldset class="Matrícula">
+            <legend>
+                <h3>Informações de Matrícula</h3>
+            </legend>
+
+            <table width="400px">
+                <tr>
+                    <td class="Serie">
+                        <label>Série:</label>
+                        <select id="Serie">
+                            <option value="#">Infantil</option>
+                            <option value="#">Jovem</option>
+                            <option value="#">Adulto</option>
+                        </select>
+                    </td>
+
+                    <td class="Turno">
+                        <label for="Turno"> Turno:</label><br>
+                        <input type="radio" name="Turno" checked="checked" value="Mãnha">Manhã<br>
+                        <input type="radio" name="Turno" value="Tarde">Tarde
+                    </td>
+
+                    <td>
+                        <label>Atividades Extracurriculares:</label><br>
+                        <input type="checkbox" name="Informática" value="Informática"> Informática <br>
+                        <input type="checkbox" name="Música" value="Música">Música <br>
+                        <input type="checkbox" name="Ballet" value="Ballet">Ballet <br>
+                        <input type="checkbox" name="Pintura" value="Pintura">Pintura <br>
+                        <input type="checkbox" name="Judô" value="Judô">Judô <br>
+                        <input type="checkbox" name="Futebol" value="Futebol">Futebol <br>
+
+                    </td>
+
+                </tr>
+
+            </table>
+
+        </fieldset>
+        <br>
+        <br>
+
+        <div class="EnviarLimpar">
+            <button type="submit">Enviar Formulário</button>
+            <button type="reset">Limpar Campo</button>
+        </div>
+
+    </form>
+
+</body>
+
+</html>

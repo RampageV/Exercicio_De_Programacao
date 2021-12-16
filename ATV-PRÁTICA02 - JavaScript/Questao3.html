@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <label for="numero">1°:</label>
+    <input type="text" id="numero1" placeholder="Digite os números"><br>
+    <label for="numero">2°:</label>
+    <input type="text" id="numero2" placeholder="Digite os números"><br>
+    <label for="numero">3°:</label>
+    <input type="text" id="numero3" placeholder="Digite os números"><br>
+    <label for="numero">4°:</label>
+    <input type="text" id="numero4" placeholder="Digite os números"><br>
+    <label for="numero">5°:</label>
+    <input type="text" id="numero5" placeholder="Digite os números"><br>
+    <!--Botão enviar com método NumeroAoQUadrado-->
+    <button onclick="NumeroAoQuadrado()">Enviar</button>
+
+    <p id="resposta1"></p>
+    <p id="resposta2"></p>
+    <p id="resposta3"></p>
+    <p id="resposta4"></p>
+    <p id="resposta5"></p>
+
+    <script>
+        // Método para ser chamado no botão Enviar.
+        function NumeroAoQuadrado() {
+
+            // Variaveis do resultado
+            var resultado1, resultado2, resultado3, resultado4, resultado5 = 0.0
+            // Amazenando informações que estão na barra do input de cada input.
+            var numero1 = document.getElementById('numero1').value;
+            var numero2 = document.getElementById('numero2').value;
+            var numero3 = document.getElementById('numero3').value;
+            var numero4 = document.getElementById('numero4').value;
+            var numero5 = document.getElementById('numero5').value;
+            // Primeiro pego o número que está no input e faço ele ao quadrado e depois converto em um float
+            resultado1 = parseFloat(numero1 = Math.pow(numero1, 2));
+            document.getElementById('resposta1').innerHTML = "1°: " + resultado1;
+
+            resultado2 = parseFloat(numero2 = Math.pow(numero2, 2));
+            document.getElementById('resposta2').innerHTML = "2°: " + resultado2;
+
+            resultado3 = parseFloat(numero3 = Math.pow(numero3, 2));
+            document.getElementById('resposta3').innerHTML = "3°: " + resultado3;
+
+            resultado4 = parseFloat(numero4 = Math.pow(numero4, 2));
+            document.getElementById('resposta4').innerHTML = "4°: " + resultado4;
+
+            resultado5 = parseFloat(numero5 = Math.pow(numero5, 2));
+            document.getElementById('resposta5').innerHTML = "5°: " + resultado5;
+
+        }
+    </script>
+
+</body>
+
+</html>
