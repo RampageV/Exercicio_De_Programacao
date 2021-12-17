@@ -4,63 +4,63 @@ var Jogador1 = 0;
 var Jogador2 = 0;
 var placar;
 
-// if (Jogador1 != -1) {
-//     if (Jogador1 > 0) {
-//         console.log('Jogador marco 1 ponto ');
-//     } else if (Jogador2 > 0) {
-//         console.log('Jogador número 2 ganho 1 ponto');
-//     } else {
-//         console.log('Nenhum jogador ganho ponto')
-//     }
-// }
+if (Jogador1 != -1) {
+    if (Jogador1 > 0) {
+        console.log('Jogador marco 1 ponto ');
+    } else if (Jogador2 > 0) {
+        console.log('Jogador número 2 ganho 1 ponto');
+    } else {
+        console.log('Nenhum jogador ganho ponto')
+    }
+}
 
 /* -------------------------------------IF TERNÁRIO-------------------------------*/
 
-// ? represeta o if ternário, depois dele vem a primeiro condição, depois do ':', vem a segunda condição
-// Jogador1 != -1 && Jogador2 != -1 ? console.log('Jogadores valido') : console.log('Jogadores invalido')
-// if (Jogador1 != -1) {
+//? represeta o if ternário, depois dele vem a primeiro condição, depois do ':', vem a segunda condição
+Jogador1 != -1 && Jogador2 != -1 ? console.log('Jogadores valido') : console.log('Jogadores invalido')
+if (Jogador1 != -1) {
 
-//     if (Jogador1 > 0 && Jogador2 == 0) {
-//         console.log('Jogador marco 1 ponto ');
-//         placar = Jogador1 > Jogador2;
+    if (Jogador1 > 0 && Jogador2 == 0) {
+        console.log('Jogador marco 1 ponto ');
+        placar = Jogador1 > Jogador2;
 
-//     } else if (Jogador2 > 0 && Jogador1 == 0) {
-//         console.log('Jogador número 2 ganho 1 ponto');
-//         placar = Jogador2 > Jogador1;
+    } else if (Jogador2 > 0 && Jogador1 == 0) {
+        console.log('Jogador número 2 ganho 1 ponto');
+        placar = Jogador2 > Jogador1;
 
-//     } else {
-//         console.log('Nenhum jogador ganho ponto')
-//     }
-// }
+    } else {
+        console.log('Nenhum jogador ganho ponto')
+    }
+}
 
 /* --------------------------------------------USANDO SWITCH/CASE------------------------------------  */
-// Jogador1 != -1 && Jogador2 != -1 ? console.log('Jogadores valido') : console.log('Jogadores invalido')
-// if (Jogador1 != -1) {
+Jogador1 != -1 && Jogador2 != -1 ? console.log('Jogadores valido') : console.log('Jogadores invalido')
+if (Jogador1 != -1) {
 
-//     if (Jogador1 > 0 && Jogador2 == 0) {
-//         console.log('Jogador marco 1 ponto ');
-//         placar = Jogador1 > Jogador2;
+    if (Jogador1 > 0 && Jogador2 == 0) {
+        console.log('Jogador marco 1 ponto ');
+        placar = Jogador1 > Jogador2;
 
-//     } else if (Jogador2 > 0 && Jogador1 == 0) {
-//         console.log('Jogador número 2 ganho 1 ponto');
-//         placar = Jogador2 > Jogador1;
+    } else if (Jogador2 > 0 && Jogador1 == 0) {
+        console.log('Jogador número 2 ganho 1 ponto');
+        placar = Jogador2 > Jogador1;
 
-//     } else {
-//         console.log('Nenhum jogador ganho ponto')
-//     }
-// }
-// switch (placar) {
+    } else {
+        console.log('Nenhum jogador ganho ponto')
+    }
+}
+switch (placar) {
 
-//     case placar = Jogador1 > Jogador2:
-//     console.log('Jogador 1 ganho do jogador 2');
-//     break;
+    case placar = Jogador1 > Jogador2:
+    console.log('Jogador 1 ganho do jogador 2');
+    break;
 
-//     case placar = Jogador2 > Jogador1:
-//         console.log('Jogador 2 ganho do jogar 1');
-//         break;
+    case placar = Jogador2 > Jogador1:
+        console.log('Jogador 2 ganho do jogar 1');
+        break;
 
-//         default: // Se os dois case não forem atendido, ira receber essa mensagem por default.
-//             console.log('Ninguém ganho !');
+        default: // Se os dois case não forem atendido, ira receber essa mensagem por default.
+            console.log('Ninguém ganho !');
 
 
 /* ------------------------------ for, for in, for of, while, do while --------------------------------------- */
