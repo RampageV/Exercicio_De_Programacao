@@ -61,7 +61,7 @@ switch (placar) {
 
         default: // Se os dois case não forem atendido, ira receber essa mensagem por default.
             console.log('Ninguém ganho !');
-
+}
 
 /* ------------------------------ for, for in, for of, while, do while --------------------------------------- */
 
@@ -115,6 +115,6 @@ do {
   a++;
   console.log(a)
 
-} while (a < 10) {
+} while (a < 10){
 
 }
