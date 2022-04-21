@@ -1,0 +1,27 @@
+.navbar{
+    background-color: aqua;
+}
+
+.quem-somos{
+    background-color:darkgray;
+    color: white;  
+}
+
+.margin{
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.parceiros{
+    background-color: white;
+}
+
+.serviço{
+    background-color: bisque;
+}
+
+.final-footer{
+    background-color: black;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
