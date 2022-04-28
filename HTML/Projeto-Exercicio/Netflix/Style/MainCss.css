@@ -1,0 +1,74 @@
+:root {
+    /*Variaveis, quando quiser mudar só mudar o valor da variavel*/
+    --preto: black;
+    --vermelho: red;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    /*Serve para ter o tamanho real sem a margen e padding somar com width*/
+    box-sizing: border-box;
+}
+
+
+/* Header */
+
+
+body {
+    background-color: var(--preto);
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+}
+
+header .container {
+    display: flex;
+    /*Alinhamento dos elementos para o centro*/
+    align-items: center;
+    /*Separado elementos por hieraquia*/
+    justify-content: space-between;
+
+}
+
+header .logo {
+    margin-left: 5px;
+    color: var(--vermelho);
+    font-family: 'Arial black';
+    font-size: 40px;
+}
+
+header div nav a {
+    text-decoration: none;
+    color: #AAA;
+    margin-right: 10px;
+}
+
+header div nav a:hover {
+    color: white;
+}
+
+
+/*Filme principal(Main)*/
+
+
+.filme-principal {
+    font-size: 16px;
+    background: linear-gradient(rgba(0, 0, 0, .50), rgba(0, 0, 0, .50)), url(/HTML/Projeto-Exercicio/Netflix/img/sobrenatural.webp);
+    /*linear-gradient precisa informar duas cores,pois é um degrade*/
+    height: 400px;
+    background-size: cover;
+    /*Pega a area de cobertura da caixa por inteira */
+    display: flex;
+    flex-direction: column;
+    /*Pega a flex e transforma em colunas*/
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.filme-principal .descricao {
+    margin-bottom: 40px;
+}
+
+.titulo{
+    font-size: 40px;
+}
