@@ -1,13 +1,27 @@
 import React from "react"
 import ReactDOM from "react-dom"
+import Button from "./Button.jsx"
+import ComponentA from "./ComponentA.jsx"
+import ComponentB from "./ComponentB.jsx"
 import "./styles.css"
 
-const element = "Fala pessoal"
+function soma(a,b){
+          alert(a+b)
+}
 
 function App() {
 
     return (
-         <h2>{element} </h2>
+        <div>
+            Hello World
+          <Button onClick={() => soma(50,50)} name = "Erick Pessoa"/>
+          <ComponentA>
+              <ComponentB>
+                  <Button onClick={() => soma(80,50)} name = "Rick Pessoa"/>
+              </ComponentB>
+          </ComponentA>
+        </div>
+     
     )
 
 }
