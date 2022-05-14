@@ -2,26 +2,16 @@ import React from "react"
 import ReactDOM from "react-dom"
 import "./styles.css"
 
+const element = "Fala pessoal"
 
-function PrimeiraFuncao(){
-
-    return(
-        <div className="teste">
-          Primeiro código em ReactJS
-        </div>
-    )
-}
-
-
-const App = () => {
+function App() {
 
     return (
-        <div className = "App">
-       {PrimeiraFuncao()}
-        </div>
+         <h2>{element} </h2>
     )
+
 }
 
 
 const rootElement = document.getElementById("root")
-ReactDOM.render(<App/>,rootElement)
+ReactDOM.render(App(),rootElement)
