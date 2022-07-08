@@ -21,6 +21,7 @@ lista_animal = ['cachorro','gato','elefante']
 
 
 #lista_animal.pop() #Serve para tira ultima variavel do array
+#print(lista_animal)
 #lista_animal.remove('cachorro') # Serve para remove sabendo o nome do elemento
 
 #lista.sort() #Sort serve para ordena listas.
