@@ -15,7 +15,7 @@ def pokemon_retorn(pokemon):
     dados_pokemon = requisete.json()
     return dados_pokemon
 
-def retorna_response(url): # Serve para ver o html da página
+def retorna_response(url): # Serve para ver o html da página1
     requisete = requests.get(url)
     return requisete.text
 
