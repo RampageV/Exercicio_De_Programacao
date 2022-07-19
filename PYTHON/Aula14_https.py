@@ -20,8 +20,8 @@ def retorna_response(url): # Serve para ver o html da página1
     return requisete.text
 
 if __name__=='__main__':
-        print(retorna_response('https://mobile.muaway.net/#!/faq'))
-        #retorna_cep('01001-000')
+        #print(retorna_response('https://mobile.muaway.net/#!/faq'))
+        retorna_cep('01001-000')
         #print(pokemon_retorn('pikachu'))
 
 
