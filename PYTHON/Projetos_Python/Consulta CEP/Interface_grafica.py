@@ -15,7 +15,7 @@ def Tela_cep():
     coluna1 = [
         [sg.Text('LOGRADOURO:',font='Arial 12')],
         [sg.Text('BAIRRO:',font='Arial 12')],
-        [sg.Text('LOCALIDADE:',font='Arial 12')],
+        [sg.Text('CIDADE:',font='Arial 12')],
         [sg.Text('UF:',font='Arial 12')],
         [sg.Text('IBGE:',font='Arial 12')],
         [sg.Text('DDD:',font='Arial 12')]
