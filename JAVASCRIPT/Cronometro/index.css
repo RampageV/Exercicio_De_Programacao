@@ -1,0 +1,33 @@
+body {
+    background: black;
+}
+
+h1 {
+    color: white;
+}
+
+div {
+    text-align: center;
+}
+
+button{
+    /*A medida de em serve para dobra um tamanho original*/
+    height: 2.5em;
+    width: 6em;
+    border: none;
+    color: white;
+    /*Cursor é a seta do mouse, e pointer é para ficar aquela mãozinha no lugar da seta*/
+    cursor: pointer; 
+}
+
+.start-btn {
+    background-color: green;
+}
+
+.pause-btn {
+    background-color: gold;
+}
+
+.stop-btn {
+    background-color: red;
+}
