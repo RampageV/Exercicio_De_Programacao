@@ -1,0 +1,10 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*Ele fica como padrão para todo o conteudo ficar dentro, caso passe do tamnho, ele vai transborda*/
+}
+
+body {
+    background: linear-gradient(90deg,rgba(65, 184, 131, 1)0%,rgba(0,212,255,1)100%);
+}
