@@ -1,19 +1,70 @@
+/*------------------------------------Essa parte é para o site todo-------------------------*/
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;/*Ele fica como padrão para todo o conteudo ficar dentro, caso passe do tamnho, ele vai transborda*/
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
     height: 100vh;
-    background: linear-gradient(90deg,rgba(65, 184, 131, 1)0%,rgba(0,212,255,1)100%);
+    background: linear-gradient(90deg, rgba(65, 184, 131, 1)0%, rgba(0, 212, 255, 1)100%);
     display: flex;
-    align-items: center; /* Se você não definir height para o container, a propriedade não influencia no layout.*/
-    justify-content: center; /*Excelente propriedade para ser usada em casos que você deseja alinhar um item na ponta esquerda e outro na direita,*/
+    align-items: center;/* Se você não definir height para o container, a propriedade não influencia no layout.*/
+    justify-content: center;/*Excelente propriedade para ser usada em casos que você deseja alinhar um item na ponta esquerda e outro na direita,*/
 }
 
-.container{
+/*------------------------------Parte do input com o botão de adicionar-------------------------------*/
+
+.container {
     border: 2px solid #fff;
-    padding: 30px 40px; /*30px é tamanho vertical e os 40px horizontal*/
-    width:30%;
+    padding: 30px 40px;/*30px é tamanho vertical e os 40px horizontal*/
+    width: 40%;
+}
+
+.new-task-container {
+    background-color: #fff;
+    padding: 30px 20px;
+    border-radius: 5px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    display: flex;
+}
+
+.new-task-container input{
+    flex: 5px;
+    font-size: 1rem;
+    border: 2px solid #d1d2d3;
+    border-radius: 5px;
+    padding: 12px;
+    font-weight: 800; /*400 padrão, 800 fica o negrito mais forte*/
+}
+
+.new-task-container input:focus{ /*é aplicada quando um elemento recebe foco, o que pode ocorrer quando o usuário seleciona o elemento utilizando o teclado ou ativando o mesmo com o mouse*/
+    outline: none; /*Tira aquela borda escura quando clica no input*/
+    border-color: #41b883;
+}
+
+.new-task-button{
+    flex: 1;
+    border-radius: 5px;
+    height: 100%;
+    font-size: 1rem; /*1rem é igual a 16px*/
+    border: none;
+    background-color: #41b883;
+    color: #fff;
+    padding: 12px;
+    margin-left: 12px;
+    cursor: pointer;
+}
+
+/*-----------------------Onde as tarefas vão aparecer-----------------------------*/
+
+.task_container{
+    background-color: #fff;
+    padding: 30px 20px;
+    margin-top: 60px;
+    border-radius: 10px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    width: 100%;
 }
