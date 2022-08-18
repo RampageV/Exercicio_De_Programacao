@@ -10,11 +10,21 @@
 </head>
 
 <body>
+
     <div>
+        
         <h1 id="watch">00:00:00</h1>
-        <button class="start-btn" onclick="start()">Start</button>
+        
+        <button class="start-btn" onclick="start()" id="begins">Start</button>
         <button class="pause-btn" onclick="pause()">Pause</button>
-        <button class="stop-btn" onclick="stop()">Stop</button>
+        <button class="stop-btn" onclick="stop()">Stop</button>     
+        
+        <audio id="sound" src="Read All Over - Nathan Moore.mp3" style="display:none;"></audio>    
+    </div>
+
+    <div class="comunicado">
+        <p>Coloque o valor que Deseja</p>
+        <input type="text" id="alarm">
     </div>
     <script src="Index.js"></script>
 </body>

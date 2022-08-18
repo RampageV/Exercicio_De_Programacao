@@ -1,5 +1,9 @@
 body {
+    margin: 0;
+    padding: 0;
     background: black;
+    display: flexbox;
+
 }
 
 h1 {
@@ -8,6 +12,7 @@ h1 {
 
 div {
     text-align: center;
+    
 }
 
 button{
@@ -31,3 +36,30 @@ button{
 .stop-btn {
     background-color: red;
 }
+
+.audio{
+    color: wheat;
+}
+
+.comunicado{
+    margin-top: 120px;
+    justify-content: center;  
+}
+
+input{
+    font-size: 25px;
+    border-radius: 6px;
+    outline: none;
+    text-align: center;  
+    
+}
+
+input::placeholder{
+    font-size: 25px;
+    
+}
+
+p{
+    color: white;
+}
+

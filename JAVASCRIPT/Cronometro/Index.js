@@ -2,6 +2,8 @@ var sec = 0
 var min = 0
 var hours = 0
 var interval
+const son = document.getElementById('sound')
+document.getElementById('alarm').value = '00:00:00'
 
 /*Função para aparecer as duas casa decimais: 01,02,03,04, se ela ficaria: 1,2,3,4 */
 function TwoDigits(digits) {
@@ -15,21 +17,26 @@ function TwoDigits(digits) {
 /*O setInterval serve para executar uma função ou instrução várias vezes em um determinado intervalo de tempo,1000 é os segundos */
 function start() {
     watch() // Estava iniciado a contagem dos segundos com atraso de um segundo, quando foi colocado a função, já foi adicionado +1 segundo,por causa que a função watch começa já com sec++.
-    interval = setInterval(watch, 1000) /*O 1000 é para a contagem contar a cada um segundo, se quiser aumentar a velocidade da contagem precisa diminuir o valor */
+     /*O 1000 é para a contagem contar a cada um segundo, se quiser aumentar a velocidade da contagem precisa diminuir o valor */
+    interval = setInterval(watch, 1000)
+     
 }
 
 /*ClearInterval serve para pausar a contagem, passando o que você deseja pausar */
 function pause() {
     clearInterval(interval)
+    son.pause()
 }
 
 /* No stop a gente para a contagem com o ClearInterval, depois zera os valores e depois da um getElement.innerText com '00:00:00' para substituir a string anterior*/
 function stop() {
-    clearInterval(interval)
     sec = 0
     min = 0
     hours = 0
+    clearInterval(interval)
     document.getElementById('watch').innerText = '00:00:00'
+    document.getElementById('alarm').value = '00:00:00'
+    son.pause()
 }
 
 /* Função contadora */
@@ -48,5 +55,18 @@ function watch() {
     } else if (hours == 24) {
         hours = 0
     }
+
     document.getElementById('watch').innerText = TwoDigits(hours) + ':' + TwoDigits(min) + ':' + TwoDigits(sec)
+    sound()
 }
+
+function sound(){
+
+    let alarm = document.getElementById('alarm').value;
+
+    if(TwoDigits(hours) + ':' + TwoDigits(min) + ':' + TwoDigits(sec) == alarm ){
+        son.play()
+        clearInterval(interval)
+    }
+}
+
