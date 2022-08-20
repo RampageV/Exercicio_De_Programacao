@@ -72,5 +72,9 @@ body {
 /* Utility*/
 
 .error{
-    border: 2px solid red;
+    border: 2px solid red !important; 
+}
+
+.error::placeholder{
+    color: red;
 }
