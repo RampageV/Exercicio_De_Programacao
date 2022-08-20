@@ -3,7 +3,6 @@ body {
     padding: 0;
     background: black;
     display: flexbox;
-
 }
 
 h1 {
@@ -11,8 +10,7 @@ h1 {
 }
 
 div {
-    text-align: center;
-    
+    text-align: center;   
 }
 
 button{
@@ -50,13 +48,7 @@ input{
     font-size: 25px;
     border-radius: 6px;
     outline: none;
-    text-align: center;  
-    
-}
-
-input::placeholder{
-    font-size: 25px;
-    
+    text-align: center;     
 }
 
 p{

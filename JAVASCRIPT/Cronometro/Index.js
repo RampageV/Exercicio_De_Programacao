@@ -2,8 +2,9 @@ var sec = 0
 var min = 0
 var hours = 0
 var interval
+
 const son = document.getElementById('sound')
-document.getElementById('alarm').value = '00:00:00'
+document.getElementById('alarm').value = '00:00:00' // O alarme começa com o tempo de '00:00:00'
 
 /*Função para aparecer as duas casa decimais: 01,02,03,04, se ela ficaria: 1,2,3,4 */
 function TwoDigits(digits) {
@@ -26,8 +27,8 @@ function start() {
 function pause() {
     clearInterval(interval)
     son.pause()
+    son.currentTime = 0 //CurrentTime especifica o tempo de reprodução atual em segundos. Quando coloca ele em 0, é o mesmo que zera a musica do começo, mesma coisa de um stop.
 }
-
 /* No stop a gente para a contagem com o ClearInterval, depois zera os valores e depois da um getElement.innerText com '00:00:00' para substituir a string anterior*/
 function stop() {
     sec = 0
@@ -37,6 +38,7 @@ function stop() {
     document.getElementById('watch').innerText = '00:00:00'
     document.getElementById('alarm').value = '00:00:00'
     son.pause()
+    son.currentTime = 0
 }
 
 /* Função contadora */
