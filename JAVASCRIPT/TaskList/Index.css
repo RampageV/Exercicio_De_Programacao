@@ -78,3 +78,11 @@ body {
 .error::placeholder{
     color: red;
 }
+
+.task-item{
+    display: flex;
+    justify-content: space-between; /*Com o space-between, os elementos fica cada uma no extremo*/
+   
+    margin-top: 6px ;
+    margin-bottom: 6px ;
+}
