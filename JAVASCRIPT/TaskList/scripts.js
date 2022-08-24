@@ -21,15 +21,25 @@ const handleAddTask = () =>{
         const taskContainer = document.createElement("p");
         taskContainer.innerText = inputElement.value;
 
+        taskContainer.addEventListener("click",() => handleClick(taskContainer))
+
         const deleteItem = document.createElement("i")
         deleteItem.classList.add("fa-solid")
         deleteItem.classList.add("fa-trash-can")
 
+        deleteItem.addEventListener('click',() => handleDeleteClick())
+
         tasksContainer.appendChild(taskItemContainer)
         taskItemContainer.appendChild(taskContainer)
         taskItemContainer.appendChild(deleteItem)
+
+        inputElement.value = "";
+
+
  };
-      
+      const handleClick = (taskContainer) =>{
+            
+      }
 
  /* Se caso aparecer aquele erro vermelho quando for adicionar uma tarefa, ao digita algo dentro do input, ela vai ser removida com essa função, utilizando o classList.remove("error") */
  const handleInputChange = () => {
@@ -40,6 +50,8 @@ const handleAddTask = () =>{
             return inputElement.classList.remove("error"); // ele vai tira a classe usando o classlist.remove
       }
  };
+
+
 
 
  addTaskButton.addEventListener("click", () => handleAddTask());

@@ -15,16 +15,22 @@ body {
     justify-content: center;/*Excelente propriedade para ser usada em casos que você deseja alinhar um item na ponta esquerda e outro na direita,*/
 }
 
+/*Variaveis de cor*/
+:root{
+    --verde: #41b883
+    --branco: #fff
+}
+
 /*------------------------------Parte do input com o botão de adicionar-------------------------------*/
 
 .container {
-    border: 2px solid #fff;
+    border: 2px solid var(--branco);
     padding: 30px 40px;/*30px é tamanho vertical e os 40px horizontal*/
     width: 40%;
 }
 
 .new-task-container {
-    background-color: #fff;
+    background-color: var(--branco);
     padding: 30px 20px;
     border-radius: 5px;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
@@ -42,7 +48,7 @@ body {
 
 .new-task-container input:focus{ /*é aplicada quando um elemento recebe foco, o que pode ocorrer quando o usuário seleciona o elemento utilizando o teclado ou ativando o mesmo com o mouse*/
     outline: none; /*Tira aquela borda escura quando clica no input*/
-    border-color: #41b883;
+    border-color: var(--verde);
 }
 
 .new-task-button{
@@ -51,8 +57,8 @@ body {
     height: 100%;
     font-size: 1rem; /*1rem é igual a 16px*/
     border: none;
-    background-color: #41b883;
-    color: #fff;
+    background-color: var(--verde);
+    color: var(--branco);
     padding: 12px;
     margin-left: 12px;
     cursor: pointer;
@@ -61,7 +67,7 @@ body {
 /*-----------------------Onde as tarefas vão aparecer-----------------------------*/
 
 .task_container{
-    background-color: #fff;
+    background-color: var(--branco);
     padding: 30px 20px;
     margin-top: 60px;
     border-radius: 10px;
@@ -79,10 +85,16 @@ body {
     color: red;
 }
 
+.task-item i{
+    background-color: var(--verde);
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+}
+
 .task-item{
     display: flex;
     justify-content: space-between; /*Com o space-between, os elementos fica cada uma no extremo*/
-   
     margin-top: 6px ;
     margin-bottom: 6px ;
 }
