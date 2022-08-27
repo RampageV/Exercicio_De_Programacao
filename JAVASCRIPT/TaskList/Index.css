@@ -17,8 +17,8 @@ body {
 
 /*Variaveis de cor*/
 :root{
-    --verde: #41b883
-    --branco: #fff
+    --verde: #41b883;
+    --branco: #fff;
 }
 
 /*------------------------------Parte do input com o botão de adicionar-------------------------------*/
@@ -97,4 +97,9 @@ body {
     justify-content: space-between; /*Com o space-between, os elementos fica cada uma no extremo*/
     margin-top: 6px ;
     margin-bottom: 6px ;
+}
+
+/*Função: handleClick*/
+.completed{
+    text-decoration: line-through; /*Loca um risco no meio da palavra onde tiver a classe*/
 }

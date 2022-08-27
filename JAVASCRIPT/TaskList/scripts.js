@@ -18,27 +18,35 @@ const handleAddTask = () =>{
         const taskItemContainer = document.createElement("div"); // Criado uma classe, quando clicar no botão adicionar
         taskItemContainer.classList.add("task-item") // Nome da classe vai ser task-item
        
-        const taskContainer = document.createElement("p");
-        taskContainer.innerText = inputElement.value;
-
-        taskContainer.addEventListener("click",() => handleClick(taskContainer))
-
+        const taskContent = document.createElement("p");
+        taskContent.innerText = inputElement.value;
+        
+        taskContent.addEventListener("click", () => handleClick(taskContent))
+        
         const deleteItem = document.createElement("i")
         deleteItem.classList.add("fa-solid")
         deleteItem.classList.add("fa-trash-can")
 
-        deleteItem.addEventListener('click',() => handleDeleteClick())
-
+        deleteItem.addEventListener("click", () => handleDeleteClick())
+        
         tasksContainer.appendChild(taskItemContainer)
-        taskItemContainer.appendChild(taskContainer)
+        taskItemContainer.appendChild(taskContent)
         taskItemContainer.appendChild(deleteItem)
-
+        
         inputElement.value = "";
+        
+        
+     };
+     
 
-
- };
-      const handleClick = (taskContainer) =>{
+      const handleClick = (taskContent) => {
+            const tasks = tasksContainer.childNodes; // Aqui ele pego o primeiro filho que está dentro da classe: task_container, aí toda vez que é criado o tag div,p e i dentro do task_ container, ele vaie está pegando o primeiro div, p e i criado.
             
+            for (const task of tasks){//  Aqui foi criado um for of, para ele pecorrer as tasks 
+                 if (task.firstChild === taskContent) { // Aqui ele verifica se a primeira task é igual ao TaskContent, usando o firstChild que pega o primeiro paragrafo que é criado, e compara se são iguais, se for, ele vai cria uma nova classe dentro do paragrafo <p>
+                    task.firstChild.classList.toggle("completed"); // Pegando o paragrafo usando o task.firstChild, e criando uma classe nele chamada: completed. A classe completed está dentro do método toggle, que serve como um interruptor, caso for clicado, ele ativa, se clica de novo ele desativa. 
+                 }
+            }              
       }
 
  /* Se caso aparecer aquele erro vermelho quando for adicionar uma tarefa, ao digita algo dentro do input, ela vai ser removida com essa função, utilizando o classList.remove("error") */
