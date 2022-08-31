@@ -27,7 +27,7 @@ const handleAddTask = () =>{
         deleteItem.classList.add("fa-solid")
         deleteItem.classList.add("fa-trash-can")
 
-        deleteItem.addEventListener("click", () => handleDeleteClick())
+        deleteItem.addEventListener("click", () => handleDeleteClick(taskContent,taskItemContainer))
         
         tasksContainer.appendChild(taskItemContainer)
         taskItemContainer.appendChild(taskContent)
@@ -35,18 +35,29 @@ const handleAddTask = () =>{
         
         inputElement.value = "";
         
-        
+        UpdateLocalStorage()  
      };
      
 
       const handleClick = (taskContent) => {
-            const tasks = tasksContainer.childNodes; // Aqui ele pego o primeiro filho que está dentro da classe: task_container, aí toda vez que é criado o tag div,p e i dentro do task_ container, ele vaie está pegando o primeiro div, p e i criado.
+            const tasks = tasksContainer.childNodes; // Aqui ele pego o primeiro filho que está dentro da classe: task_container, aí toda vez que é criado o tag div,p e i dentro do task_ container, ele vai está pegando o primeiro div, p e i criado.
             
-            for (const task of tasks){//  Aqui foi criado um for of, para ele pecorrer as tasks 
+            for (const task of tasks){//  Aqui foi criado um for of, para ele pecorrer as tasks, o for of já percorre os valores
                  if (task.firstChild === taskContent) { // Aqui ele verifica se a primeira task é igual ao TaskContent, usando o firstChild que pega o primeiro paragrafo que é criado, e compara se são iguais, se for, ele vai cria uma nova classe dentro do paragrafo <p>
                     task.firstChild.classList.toggle("completed"); // Pegando o paragrafo usando o task.firstChild, e criando uma classe nele chamada: completed. A classe completed está dentro do método toggle, que serve como um interruptor, caso for clicado, ele ativa, se clica de novo ele desativa. 
                  }
-            }              
+            }
+            UpdateLocalStorage()              
+      }
+
+      const handleDeleteClick = (taskContent,taskItemContainer) =>{
+           const tasks = tasksContainer.childNodes;
+
+           for(const task of tasks){
+             if(task.firstChild === taskContent)
+                  taskItemContainer.remove()
+           }
+           UpdateLocalStorage()  
       }
 
  /* Se caso aparecer aquele erro vermelho quando for adicionar uma tarefa, ao digita algo dentro do input, ela vai ser removida com essa função, utilizando o classList.remove("error") */
@@ -58,7 +69,17 @@ const handleAddTask = () =>{
             return inputElement.classList.remove("error"); // ele vai tira a classe usando o classlist.remove
       }
  };
+ 
 
+ const UpdateLocalStorage = () =>{
+           const tasks = tasksContainer.childNodes;
+
+           const localStorageTasks = [...tasks].map(task =>{
+                
+           });
+
+
+ }
 
 
 
