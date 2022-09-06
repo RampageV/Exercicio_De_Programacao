@@ -68,17 +68,21 @@ const handleAddTask = () =>{
       if(InputIsValid){ // Se for valido, vai remover a classe error e tira aquele vermelho da borda 
             return inputElement.classList.remove("error"); // ele vai tira a classe usando o classlist.remove
       }
+
  };
  
 
- const UpdateLocalStorage = () =>{
+ const UpdateLocalStorage = () => {// Essa função pegar todas as tarefas na tela, que vai guarda em json a lista e depois converter em string, porque o local storege só guarda string  
            const tasks = tasksContainer.childNodes;
 
-           const localStorageTasks = [...tasks].map(task =>{
+           const localStorageTasks = [...tasks].map((task) => { // Para usar o map, precisa ser no modelo de array
+                const content = task.firstChild;
+                const isCompleted = content.classList.contains("completed");// Se na lista de classList tiver o completed, significa que está concluída
                 
+                return { description: content.innerText,isCompleted }
            });
 
-
+          localStorage.setItem("tasks",JSON.stringify(localStorageTasks)) // Salvando no LocalStorage, aí a gente precisa converter o json para string, localStorageTasks está como json
  }
 
 
