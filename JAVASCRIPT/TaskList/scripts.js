@@ -35,7 +35,7 @@ const handleAddTask = () =>{
         
         inputElement.value = "";
         
-        UpdateLocalStorage()  
+         
      };
      
 
@@ -47,7 +47,7 @@ const handleAddTask = () =>{
                     task.firstChild.classList.toggle("completed"); // Pegando o paragrafo usando o task.firstChild, e criando uma classe nele chamada: completed. A classe completed está dentro do método toggle, que serve como um interruptor, caso for clicado, ele ativa, se clica de novo ele desativa. 
                  }
             }
-            UpdateLocalStorage()              
+                         
       }
 
       const handleDeleteClick = (taskContent,taskItemContainer) =>{
@@ -57,7 +57,7 @@ const handleAddTask = () =>{
              if(task.firstChild === taskContent)
                   taskItemContainer.remove()
            }
-           UpdateLocalStorage()  
+           
       }
 
  /* Se caso aparecer aquele erro vermelho quando for adicionar uma tarefa, ao digita algo dentro do input, ela vai ser removida com essa função, utilizando o classList.remove("error") */
@@ -71,21 +71,6 @@ const handleAddTask = () =>{
 
  };
  
-
- const UpdateLocalStorage = () => {// Essa função pegar todas as tarefas na tela, que vai guarda em json a lista e depois converter em string, porque o local storege só guarda string  
-           const tasks = tasksContainer.childNodes;
-
-           const localStorageTasks = [...tasks].map((task) => { // Para usar o map, precisa ser no modelo de array
-                const content = task.firstChild;
-                const isCompleted = content.classList.contains("completed");// Se na lista de classList tiver o completed, significa que está concluída
-                
-                return { description: content.innerText,isCompleted }
-           });
-
-          localStorage.setItem("tasks",JSON.stringify(localStorageTasks)) // Salvando no LocalStorage, aí a gente precisa converter o json para string, localStorageTasks está como json
- }
-
-
 
  addTaskButton.addEventListener("click", () => handleAddTask());
 
