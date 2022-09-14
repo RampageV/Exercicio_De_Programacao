@@ -24,6 +24,16 @@ body {
     grid-template-columns: repeat(3,auto); /*Bordas do grid, o repeat deixa as grids mais compacto*/
 }
 
+/*------Sombra do x ou circulo*/
+.board.x .cell:not(.x):not(.circulo):hover::after,/*Quero pegar todas as celulas da .board.x que não tem a classe x e circulo (not(.x) e not(.circulo)) e nas celulas vazias quero aplica o hover  */
+.board.x .cell:not(.x):not(.circulo):hover::before,
+.board.circulo .cell:not(.x):not(.circulo):hover::after,
+.board.circulo .cell:not(.x):not(.circulo):hover::before{
+    background-color: rgb(255, 255, 255, 0.3) !important;
+}
+
+
+/*-------Celulas-----*/
 .cell{
     position: relative;
     width: 100px;
@@ -67,7 +77,7 @@ border-right: none;
 
 .cell.x::before, /*Antes e depois para fazer um X, cada com uma perna*/
 .cell.x::after,
-.board.x .cell:not(.x):not(.cell.circulo):hover::after,/*Quero pegar todas as celulas da .board.x que não tem a classe x e circulo (not(.x) e not(.circulo)) e nas celulas vazias quero aplica o hover  */
+.board.x .cell:not(.x):not(.circulo):hover::after,/*Quero pegar todas as celulas da .board.x que não tem a classe x e circulo (not(.x) e not(.circulo)) e nas celulas vazias quero aplica o hover  */
 .board.x .cell:not(.x):not(.circulo):hover::before{
     content: "";
     background-color: white;
@@ -89,7 +99,9 @@ border-right: none;
 /*--------------CICLO---------*/
 
 .cell.circulo::before, 
-.cell.circulo::after{
+.cell.circulo::after,
+.board.circulo .cell:not(.x):not(.circulo):hover::after,
+.board.circulo .cell:not(.x):not(.circulo):hover::after{
     content: "";
     background-color: white;
     height: calc(100px * 0.9);
@@ -106,5 +118,10 @@ border-right: none;
 
 /*Mensagem de vitória*/
 .winning-message{
-    display: none;
+    display: flex;
+    position: fixed; /*Mantem o elemento no mesmo lugar, mesmo que role para cima ou para baixo*/
+    top: 0; /*Quando você quiser que o elemento ele fique por cima de outros elementos e ocupando toda a tela (altura e lagura, com o position: fixed com tudo 0)*/
+    right: 0;
+    left: 0;
+    bottom: 0;
 }
