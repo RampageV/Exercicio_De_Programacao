@@ -124,4 +124,21 @@ border-right: none;
     right: 0;
     left: 0;
     bottom: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0,0.8);
+    flex-direction: column; /*Como deixa o display flex, consigo usar o flex-direction column para deixa os elementos na vertical*/
+}
+
+/*---------Botão-------*/
+
+.winning-message-buttom{
+    font-size: 2.5rem;
+    background-color: rgba(65, 184, 131, 1);
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    margin-top: 16px;
+    color: white;
 }
