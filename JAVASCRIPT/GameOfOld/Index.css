@@ -118,7 +118,7 @@ border-right: none;
 
 /*Mensagem de vitória*/
 .winning-message{
-    display: flex;
+    display: none;
     position: fixed; /*Mantem o elemento no mesmo lugar, mesmo que role para cima ou para baixo*/
     top: 0; /*Quando você quiser que o elemento ele fique por cima de outros elementos e ocupando toda a tela (altura e lagura, com o position: fixed com tudo 0)*/
     right: 0;
@@ -141,4 +141,14 @@ border-right: none;
     border: none;
     margin-top: 16px;
     color: white;
+}
+
+.winning-message-buttom:hover{
+    background-color: white;
+    color:rgba(65, 184, 131, 1);
+}
+
+.winning-message-text{
+    color: white;
+    font-size: 5rem;
 }
