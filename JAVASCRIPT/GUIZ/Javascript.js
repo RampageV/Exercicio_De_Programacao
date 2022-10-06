@@ -36,12 +36,12 @@ let app = {
         qtas = q
         // Mostra o titulo
         let titleDiv = document.getElementById('titulo');
-        titleDiv.textContent = qtas.titulo; // Ele vai pegar o titulo da pergunta e substituir
+        titleDiv.textContent = q.titulo; // Ele vai pegar o titulo da pergunta e substituir
 
         // Mostra as alternativas
         let alts = document.querySelectorAll('.alternativa');
         alts.forEach((element, index) => { // ForEach é igual ao um for ou map, dentro dele a gente passa um element e index dele, mas aqui no caso, estou passando uma função para cada elemento do ALTS
-            element.textContent = qtas.alternativas[index] // O element aqui está pegando o primeiro elemento do array e colocando com o textContent as alternativas
+            element.textContent = q.alternativas[index] // O element aqui está pegando o primeiro elemento do array e colocando com o textContent as alternativas
         });
     },
 
@@ -59,22 +59,24 @@ let app = {
         let resultDiv = document.getElementById('resulta')
 
         if (qtas.correto == user) {
+
             totalPontos++
             resultDiv.textContent = 'Resposta está CORRETA !!'
-
+            
         } else {
+            
             // Obtendo  a questão atual
             let pergunta = perguntas[AtualPergunta]
             //Obtendo  o indece da resposta correta da questão atual
             let indexx = pergunta.correto;
             // Obtendo o texto  da resposta  correta  da questão atual
             let cText = pergunta.alternativas[indexx];
-
+            
             resultDiv.textContent = `INCORRETA !! Resposta certa: ${cText} !!`
         }
-
-        this.atualizarPontos();
+        
         this.ProximaPerg();
+        this.atualizarPontos();
         this.mostraquestao(perguntas[AtualPergunta])
 
     },
