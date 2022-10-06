@@ -1,12 +1,12 @@
 let perguntas = [{
         titulo: "Gato",
-        alternativas: ['Cat', 'Gat', 'Gate', 'Dog'],
-        correto: 0
+        alternativas: ['Gat', 'Cat', 'Gate', 'Dog'],
+        correto: 1
     },
     {
         titulo: "Fire",
-        alternativas: ['Água', 'Luz', 'Ar', 'Fogo'],
-        correto: 3
+        alternativas: ['Água', 'Ar', 'Fogo', 'luz'],
+        correto: 2
     },
     {
         titulo: "Bird",
@@ -36,12 +36,12 @@ let app = {
         qtas = q
         // Mostra o titulo
         let titleDiv = document.getElementById('titulo');
-        titleDiv.textContent = q.titulo; // Ele vai pegar o titulo da pergunta e substituir
+        titleDiv.textContent = qtas.titulo; // Ele vai pegar o titulo da pergunta e substituir
 
         // Mostra as alternativas
         let alts = document.querySelectorAll('.alternativa');
         alts.forEach((element, index) => { // ForEach é igual ao um for ou map, dentro dele a gente passa um element e index dele, mas aqui no caso, estou passando uma função para cada elemento do ALTS
-            element.textContent = q.alternativas[index] // O element aqui está pegando o primeiro elemento do array e colocando com o textContent as alternativas
+            element.textContent = qtas.alternativas[index] // O element aqui está pegando o primeiro elemento do array e colocando com o textContent as alternativas
         });
     },
 
@@ -55,13 +55,22 @@ let app = {
 
 
     checaResposta: function (user) {
+        
+        let resultDiv = document.getElementById('resulta')
+
         if (qtas.correto == user) {
-            console.log("Certa !!")
             totalPontos++
-            this.mostraReposta();
+            resultDiv.textContent = 'Resposta está CORRETA !!'
+
         } else {
-            console.log("Errada !!")
-            this.mostraReposta();
+            // Obtendo  a questão atual
+            let pergunta = perguntas[AtualPergunta]
+            //Obtendo  o indece da resposta correta da questão atual
+            let indexx = pergunta.correto;
+            // Obtendo o texto  da resposta  correta  da questão atual
+            let cText = pergunta.alternativas[indexx];
+
+            resultDiv.textContent = `INCORRETA !! Resposta certa: ${cText} !!`
         }
 
         this.atualizarPontos();
@@ -75,24 +84,28 @@ let app = {
         scoreDiv.textContent = `Sua pontuação é: ${totalPontos}`
     },
 
-    mostraReposta: function (correto) {
-        let resultDiv = document.getElementById('result')
-        let result = ''
-        //Formatar com a mensagem exibida
-        if (correto) {
-            result = 'Resposta correta !!';
-        } else {
-            // Obtendo  a questão atual
-            let pergunta = perguntas[AtualPergunta]
-            //Obtendo  o indece da resposta correta da questão atual
-            let indexx = pergunta.correto
-            // Obtendo o texto  da resposta  correta  da questão atual
-            let cText = pegunta.alternativas[indexx]
-            result = `Incorreto !! Resposta correta: ${cText}`
-        }
+    // mostraReposta: function (corretooo) {
+    //     let resultDiv = document.getElementById('resulta')
+    //     let result = ''
 
-        resultDiv.textcontent = result;
-    }
+    //     // Obtendo  a questão atual
+    //     let pergunta = perguntas[AtualPergunta]
+    //     //Obtendo  o indece da resposta correta da questão atual
+    //     let indexx = pergunta.correto;
+    //     // Obtendo o texto  da resposta  correta  da questão atual
+    //     let cText = pergunta.alternativas[indexx];
+
+    //     //Formatar com a mensagem exibida
+    //     if (corretooo) {
+    //         result = 'Erro'
+    //     } else {
+    //         result = 'Erro'
+    //     }
+
+
+    //     resultDiv.textContent = result;
+
+    // }
 }
 
 
