@@ -84,30 +84,7 @@ let app = {
     atualizarPontos: function () {
         let scoreDiv = document.getElementById('pontos')
         scoreDiv.textContent = `Sua pontuação é: ${totalPontos}`
-    },
-
-    // mostraReposta: function (corretooo) {
-    //     let resultDiv = document.getElementById('resulta')
-    //     let result = ''
-
-    //     // Obtendo  a questão atual
-    //     let pergunta = perguntas[AtualPergunta]
-    //     //Obtendo  o indece da resposta correta da questão atual
-    //     let indexx = pergunta.correto;
-    //     // Obtendo o texto  da resposta  correta  da questão atual
-    //     let cText = pergunta.alternativas[indexx];
-
-    //     //Formatar com a mensagem exibida
-    //     if (corretooo) {
-    //         result = 'Erro'
-    //     } else {
-    //         result = 'Erro'
-    //     }
-
-
-    //     resultDiv.textContent = result;
-
-    // }
+    }
 }
 
 

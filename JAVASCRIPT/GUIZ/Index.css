@@ -1,0 +1,19 @@
+body{
+    text-align: center;
+    background-color: cadetblue;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#embrulho{
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#embrulho div, #embrulho ul{
+    width: 50%;
+    max-width: 300px;
+
+}
