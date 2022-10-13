@@ -5,12 +5,22 @@ let perguntas = [{
     },
     {
         titulo: "Fire",
-        alternativas: ['Água', 'Ar', 'Fogo', 'luz'],
+        alternativas: ['Água', 'Ar', 'Fogo', 'Luz'],
         correto: 2
     },
     {
         titulo: "Bird",
         alternativas: ['Cachorro', 'Urubu', 'Pombo', 'Passaro'],
+        correto: 3
+    },
+    {
+        titulo: "Cachorro",
+        alternativas: ['Dog', 'Cat', 'Bat', 'Fish'],
+        correto: 0
+    },
+    {
+        titulo: "Fish",
+        alternativas: ['Urubu', 'Tatu', 'Cavalo', 'Peixe'],
         correto: 3
     }
 ];

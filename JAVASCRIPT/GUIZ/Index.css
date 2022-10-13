@@ -1,19 +1,49 @@
-body{
+body {
     text-align: center;
-    background-color: cadetblue;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color:black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-#embrulho{
+#embrulho {
     margin-top: 40px;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+
 }
 
-#embrulho div, #embrulho ul{
+#embrulho div,
+#embrulho ul {
     width: 50%;
     max-width: 300px;
 
+}
+
+ul {
+    padding: 0px;
+}
+
+#titulo {
+    font-size: 20px;
+    font-weight: bold; /*Define como caracteres grossos ou finos no texto devem ser exibidos*/
+    background: floralwhite;
+    padding: 10px
+}
+
+.alternativa {
+    list-style-type: none;/* O tipo de lista vai ser none, para sair aqueles pontos do li*/
+    margin-bottom: 4px;
+    padding: 10px;
+    background-color: white;
+}
+
+.alternativa:hover{
+    cursor:pointer;
+    opacity: 0.8;
+}
+
+#resulta,#pontos{
+    color: white;
+  font-weight: bold;
 }
