@@ -1,0 +1,12 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#imagem{
+    background-image: url("/JAVASCRIPT/Jogo-Da-Forca/img/forca06.png");
+    width: 240px;
+    height: 240px;
+    background-repeat: no-repeat;/*Serve para quando colocar uma imagem, ela não repetir.*/
+}
