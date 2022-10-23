@@ -21,6 +21,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
 }
 
 #imagem {
@@ -28,5 +29,48 @@ body {
     width: 234px;
     height: 272px;
     background-repeat: no-repeat;
-    /*Serve para quando colocar uma imagem, ela não repetir.*/
+    /* Serve para quando colocar uma imagem, ela não repetir. */
+
+}
+
+#palavra-secreta {
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    margin-top: 30px;
+
+}
+
+.letras {
+    width: 14px;
+    text-align: center;
+    border-bottom: 2px solid red;
+    color: white;
+    padding: 10px;
+    margin: 4px;
+}
+
+#teclado {
+    margin-top: 30px;
+}
+
+.teclas button {
+    width: 24px;
+    height: 24px;
+    margin: 2px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px black;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.teclas button:hover {
+    background-color: silver;
+    transform: scale(1.2); /* Cria um efeito de zoom nas letras*/
+}
+
+#categoria{
+    margin-top: 30px;
+    font-size: 1.5em;
 }

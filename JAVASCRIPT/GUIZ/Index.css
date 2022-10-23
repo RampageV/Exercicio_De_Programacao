@@ -1,6 +1,6 @@
 body {
     text-align: center;
-    background-color:black;
+    background-color: black;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
@@ -26,24 +26,27 @@ ul {
 
 #titulo {
     font-size: 20px;
-    font-weight: bold; /*Define como caracteres grossos ou finos no texto devem ser exibidos*/
+    font-weight: bold;
+    /*Define como caracteres grossos ou finos no texto devem ser exibidos*/
     background: floralwhite;
     padding: 10px
 }
 
 .alternativa {
-    list-style-type: none;/* O tipo de lista vai ser none, para sair aqueles pontos do li*/
+    list-style-type: none;
+    /* O tipo de lista vai ser none, para sair aqueles pontos do li*/
     margin-bottom: 4px;
     padding: 10px;
     background-color: white;
 }
 
-.alternativa:hover{
-    cursor:pointer;
+.alternativa:hover {
+    cursor: pointer;
     opacity: 0.8;
 }
 
-#resulta,#pontos{
+#resulta,
+#pontos {
     color: white;
-  font-weight: bold;
+    font-weight: bold;
 }
