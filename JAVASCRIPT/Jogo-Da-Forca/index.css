@@ -67,10 +67,92 @@ body {
 
 .teclas button:hover {
     background-color: silver;
-    transform: scale(1.2); /* Cria um efeito de zoom nas letras*/
+    transform: scale(1.2);
+    /* Cria um efeito de zoom nas letras*/
 }
 
-#categoria{
+#categoria {
     margin-top: 30px;
     font-size: 1.5em;
+}
+
+/*------------------------------------------MEDIA ------------------------------------------------------------------*/
+
+/* -------TAMANHO DE 321PX--------*/
+@media (min-width:321px) {
+    .teclas button {
+        width: 25px;
+        height: 25px;
+        font-size: 11px;
+    }
+
+    #categoria {
+        font-size: 1.3em;
+    }
+}
+
+/* -------TAMANHO DE 376PX--------*/
+@media (min-width: 376px){
+
+    .teclas button {
+        width: 30px;
+        height: 30px;
+        font-size: 15px;
+    }
+
+    #palavra-secreta{
+        font-size: 1.3em;
+    }
+
+    .letras{
+        width: 18px;
+    }
+
+    #categoria {
+        font-size: 1.5em;
+    }
+}
+
+/* -------TAMANHO DE 426PX--------*/
+@media (min-width: 426px){
+
+    .teclas button {
+        width: 36px;
+        height: 36px;
+        font-size: 20px;
+    }
+
+    #palavra-secreta{
+        font-size: 1.5em;
+    }
+
+    .letras{
+        width: 20px;
+    }
+
+    #categoria {
+        font-size: 1.6em;
+    }
+}
+
+/* -------TAMANHO DE 769PX--------*/
+@media (min-width: 769px){
+
+    .teclas button {
+        width: 68px;
+        height: 68px;
+        font-size: 40px;
+    }
+
+    #palavra-secreta{
+        font-size: 2.5em;
+    }
+
+    .letras{
+        width: 35px;
+    }
+
+    #categoria {
+        font-size: 4em;
+    }
 }
