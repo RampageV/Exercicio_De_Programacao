@@ -44,7 +44,7 @@ body {
 .letras {
     width: 14px;
     text-align: center;
-    border-bottom: 2px solid red;
+    border: 2px solid red;
     color: white;
     padding: 10px;
     margin: 4px;

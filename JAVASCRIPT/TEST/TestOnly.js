@@ -1,11 +1,10 @@
-function num(num1, num2) {
-    return num1 + num2
+function num(x) {
+    if (x == undefined) {
+        return 'Totalmente indefinido'
+    }
+    return x
 }
 
-const num1 = (num2, num3) => {
-    return num2 + num3
-}
+let h = 5;
 
-
-console.log(num(1, 2))
-console.log(num1(5, 9))
+console.log(num(h))
