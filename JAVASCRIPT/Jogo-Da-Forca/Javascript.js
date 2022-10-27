@@ -1,3 +1,4 @@
+let tentativas = 6; // Começa com 6, porque é o numero de tentativas que a pessoa vai ter.
 let listaDinamica = []
 let palavraSecretaSorteada;
 let palabraSecretaCategoria;
@@ -94,11 +95,57 @@ const montarPalavraNaTela = () => {
         } else {
             palavraTela.innerHTML = palavraTela.innerHTML + "<div class='letras'>" + listaDinamica[i] + "</div>"
         }
-
     }
 }
 
-const verificaLetraEscolhida = (letra) =>{
+const verificaLetraEscolhida = (letra) => {
+
+    if (tentativas > 0) {
+
+        mudarStylerLetra("tecla-" + letra)
+        comparaLista(letra)
+        montarPalavraNaTela() // Aqui foi chamado para colocar as letras quando nos botões que estão em branco
+    }
+}
+
+const mudarStylerLetra = (tecla) => {
+    document.getElementById(tecla).style.background = "#800000"
+    document.getElementById(tecla).style.color = "#F8F8FF"
+}
+
+const comparaLista = (letra) => {
+
+    const pos = palavraSecretaSorteada.indexOf(letra) // Se a palavra existe dentro de palavraSecreta, eu quero que ele me der a posição
+
+    if (pos < 0) { // Aqui ele vai verificar se existe a letra dentro da palavraSecreta. Todo array começa com index 0, se caso for menor que 0, signifca que não existe.
+        tentativas-- // Se caso não exista a letra, a gente coloca o numero de tentativo--, signicando que a pessoa erro a letra.
+        /*---Aparecer imagem---*/
+        /*---Verificar se existe tentativas, caso não tenha, mostra mensagem---*/
+    } else { // Se ele acerto a letra.
+        for (i = 0; i < palavraSecretaSorteada.length; i++) { // Criando um for para percorre a palavra sorteada
+
+            if (palavraSecretaSorteada[i] == letra) { // Se caso a letra for igual a letra escolhida 
+                listaDinamica[i] = letra // O espaço que está em branco, vai receber a letra selecionada, caso tenha essa letra dentro de palavraSecreta.
+            }
+        }
+    }
+
+    let vitoria = true
+
+    for (i = 0; i < palavraSecretaSorteada.length; i++) {
+
+        if (palavraSecretaSorteada[i] != listaDinamica[i]) { // Ele verifica se a palavrasecreta é igual ao listaDinamica
+            vitoria = false
+        }
+    }
+
+    if (vitoria == true) {
+        // Mensagem de vítoria
+        tentativas = 0 // Já que ganhor, não precisa de mais tentativas. 
+    }
+}
+
+const carregaImagemForca = () =>{
 
 }
 
