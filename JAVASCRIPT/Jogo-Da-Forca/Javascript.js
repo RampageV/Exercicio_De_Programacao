@@ -100,8 +100,9 @@ const montarPalavraNaTela = () => {
 
 const verificaLetraEscolhida = (letra) => {
 
-    if (tentativas > 0) {
+    document.getElementById("tecla-" + letra).disabled = true // Isso faz a tecla selecionada ficar desativada, se não colocar esse código, toda vez que clica na letra errada, ele vai completa o boneco
 
+    if (tentativas > 0) {
         mudarStylerLetra("tecla-" + letra)
         comparaLista(letra)
         montarPalavraNaTela() // Aqui foi chamado para colocar as letras quando nos botões que estão em branco
@@ -118,8 +119,16 @@ const comparaLista = (letra) => {
     const pos = palavraSecretaSorteada.indexOf(letra) // Se a palavra existe dentro de palavraSecreta, eu quero que ele me der a posição
 
     if (pos < 0) { // Aqui ele vai verificar se existe a letra dentro da palavraSecreta. Todo array começa com index 0, se caso for menor que 0, signifca que não existe.
+
         tentativas-- // Se caso não exista a letra, a gente coloca o numero de tentativo--, signicando que a pessoa erro a letra.
+
         /*---Aparecer imagem---*/
+        carregaImagemForca()
+
+        if (tentativas == 0) { // Se o numero de tentativa for igual a zero, a gente chama a modal.
+
+            abreModal("OPS !!!", "Você ERRO, a palvra secreta era " + palavraSecretaSorteada)
+        }
         /*---Verificar se existe tentativas, caso não tenha, mostra mensagem---*/
     } else { // Se ele acerto a letra.
         for (i = 0; i < palavraSecretaSorteada.length; i++) { // Criando um for para percorre a palavra sorteada
@@ -140,14 +149,63 @@ const comparaLista = (letra) => {
     }
 
     if (vitoria == true) {
-        // Mensagem de vítoria
+
+        abreModal("Parabéns !!!", "Você acerto a palavra secreta que era, " + palavraSecretaSorteada)
         tentativas = 0 // Já que ganhor, não precisa de mais tentativas. 
     }
 }
+/* Carregamento das imagens */
+const carregaImagemForca = () => {
 
-const carregaImagemForca = () =>{
+    switch (tentativas) {
+
+        case 5:
+            document.getElementById("imagem").style.background = "url(img/forca01.png)"
+            break;
+
+        case 4:
+            document.getElementById("imagem").style.background = "url(img/forca02.png)"
+            break;
+
+        case 3:
+            document.getElementById("imagem").style.background = "url(img/forca03.png)"
+            break;
+
+        case 2:
+            document.getElementById("imagem").style.background = "url(img/forca04.png)"
+            break
+
+        case 1:
+            document.getElementById("imagem").style.background = "url(img/forca05.png)"
+            break
+
+        case 0:
+            document.getElementById("imagem").style.background = "url(img/forca06.png)"
+            break;
+    }
+
 
 }
 
+const abreModal = (titulo, mensagem) => {
+
+    let modalTitulo = document.getElementById("exampleModalLabel")
+    modalTitulo.innerText = titulo
+
+    let modalBody = document.getElementById("modalBody")
+    modalBody.innerHTML = mensagem
+
+    $("#myModal").modal({
+        show: true
+    })
+}
+
+let btnReiniciar = document.querySelector("#btnReiniciar")
+btnReiniciar.addEventListener("click", function () {
+    location.reload(); // Reiniciar a página
+});
+
+
 criarPalavraSecreta()
+
 montarPalavraNaTela()
