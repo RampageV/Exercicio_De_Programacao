@@ -200,12 +200,17 @@ const abreModal = (titulo, mensagem) => {
     })
 }
 
+/* Reinicia quando clica no controle */
 let btnReiniciar = document.querySelector("#btnReiniciar")
 btnReiniciar.addEventListener("click", function () {
     location.reload(); // Reiniciar a página
 });
 
+/* Reiniciar depois que fecha o alert() */
+let btnFechar = document.getElementById("btnFecha");
+btnFechar.addEventListener("click", function () {
+    location.reload();
+});
 
 criarPalavraSecreta()
-
 montarPalavraNaTela()
