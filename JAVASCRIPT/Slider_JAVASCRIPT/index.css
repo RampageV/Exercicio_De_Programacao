@@ -1,0 +1,38 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: gray;
+}
+
+.content {
+    height: 520px;
+    width: 935px;
+    border-radius: 20px;
+    overflow: hidden;
+    /*Tira a barra de rolagem*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /*Este código abaixo está se posicionando .itemem relação a .container; significando que .item o canto superior esquerdo está no centro de seu contêiner*/
+    transform: translate(-50%, -50%);
+    /*Enquanto abaixo está se posicionando .item em relação à sua própria largura e altura; significando menos 50% de sua largura e altura*/
+    box-shadow: 10px 10px 5px 0px black;
+}
+
+.content .img-slider img {
+    width: 100%;
+    height: 100%;
+}
+
+.navigation {
+    position: absolute;
+    bottom: 100px;
+    left: 350px;
+    display: flex;
+}
