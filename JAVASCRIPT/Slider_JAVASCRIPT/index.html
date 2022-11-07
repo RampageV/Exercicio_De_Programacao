@@ -14,14 +14,16 @@
     <div class="content">
 
         <div class="slider">
-            
+
             <!--Botão para passa as imagens-->
-            <input class="input" type="radio" name="slide" id="slide1">
+            
+            <input class="input" type="radio" name="slide" id="slide1" checked>
+            <!-- Checked faz com que o radio selecionado já comece selecionado-->
             <input class="input" type="radio" name="slide" id="slide2">
             <input class="input" type="radio" name="slide" id="slide3">
             <input class="input" type="radio" name="slide" id="slide4">
 
-            <div class="img-slider">
+            <div class="img-slider s1">
                 <img src="./img/allods1.jpg" alt="">
             </div>
             <div class="img-slider">
@@ -39,13 +41,12 @@
     <!-- 5 label para 5 imagens. As label estão ligado com os input lá da linha 19-->
     <div class="navigation">
 
-        <label class="bar" for="slide1">sdsds</label>
-        <label class="bar" for="slide2">sdsds</label>
-        <label class="bar" for="slide3">dsdsds</label>
-        <label class="bar" for="slide4">dsdsds</label>
-
+        <label class="bar" for="slide1"></label>
+        <label class="bar" for="slide2"></label>
+        <label class="bar" for="slide3"></label>
+        <label class="bar" for="slide4"></label>
     </div>
-
+    <script src="javascript.js"></script>
 </body>
 
 </html>
