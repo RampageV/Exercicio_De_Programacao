@@ -7,7 +7,68 @@
 
 .background {
     background-image: url(./Img/Astronalta.jpg);
-    background-position: right;
-    background-size: cover; /*Imagem não se multriplica*/
-height: 100vh;
+    background-position: center;
+    background-size: cover;
+    /*Imagem não se multriplica*/
+    height: 100vh;
+
+}
+
+nav {
+    border: 2px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 45px;
+    padding-left: 8%;
+}
+
+nav h2 {
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+    letter-spacing: 10px;
+}
+
+span {
+    color: #f9004d;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 10px 25px;
+    list-style-type: none;
+    /*Tira o pontos ou barra do lado de cada lista*/
+    transition: transform .2s;
+}
+
+nav ul li:hover {
+    transform: scale(1.2);
+    /*Joga a palavra para frente*/
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: capitalize;
+    /*Deixa todas as primeiras letra em maiusculo*/
+}
+
+nav ul li a:hover {
+    color: #f9004d;
+}
+
+.btn{
+    background-color:#f9004d ;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 25px;
+    border-radius: 30px;
+    transition: transform .2s; /*Deixa a transição mais suave, mas precisa do transform: scale no hover*/
+}
+
+.btn:hover{
+    transform: scale(1.2);
 }
