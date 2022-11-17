@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family= Neuton: wght @400;700 & display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -15,7 +17,7 @@
 }
 
 nav {
-    border: 2px solid red;
+   
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -28,10 +30,6 @@ nav h2 {
     font-size: 35px;
     cursor: pointer;
     letter-spacing: 10px;
-}
-
-span {
-    color: #f9004d;
 }
 
 nav ul li {
@@ -59,16 +57,80 @@ nav ul li a:hover {
     color: #f9004d;
 }
 
-.btn{
-    background-color:#f9004d ;
+.btn {
+    background-color: #f9004d;
     color: white;
     text-decoration: none;
     font-weight: bold;
     padding: 10px 25px;
     border-radius: 30px;
-    transition: transform .2s; /*Deixa a transição mais suave, mas precisa do transform: scale no hover*/
+    transition: transform .2s;
+    /*Deixa a transição mais suave, mas precisa do transform: scale no hover*/
 }
 
-.btn:hover{
+.btn:hover {
     transform: scale(1.2);
+}
+
+.Main {
+    position: absolute;
+    top: 40%;
+    left: 8%;
+    transform: translateY(-50);
+}
+
+h4 {
+    color: white;
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+
+h1 {
+    color: white;
+    margin: 20px 20px;
+    font-size: 70px;
+    font-family: 'Neuton', serif;
+}
+
+span {
+    color: #f9004d;
+    font-family: 'Neuton', serif;
+}
+
+h3 {
+    color: white;
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+
+.Container-btn form {
+    width: 420px;
+    max-width: 100%;
+    position: relative;
+
+}
+
+.Container-btn form input:first-child {
+    /*Aqui como tem dois input, eu não quero selecionar os dois, quero selecionar apenas o primeiro, por isso usei o first-child*/
+    display: inline-block;
+    width: 100%;
+    padding: 14px;
+    border-radius: 30px;
+    outline: none
+}
+
+.Container-btn form input:last-child {
+    position: absolute;
+    display: inline-block;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    background-color: #f9004d;
+    right: 6px;
+    top: 6px;
+}
+
+.Container-btn form input:last-child:hover {
+    transform: scale(0.9);
 }
