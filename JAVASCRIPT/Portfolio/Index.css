@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family= Neuton: wght @400;700 & display=swap');
 
+/*---------------------------INICIO---------------------*/
 * {
     margin: 0;
     padding: 0;
@@ -135,3 +136,44 @@ h3 {
 .Container-btn form input:last-child:hover {
     transform: scale(0.9);
 }
+
+/*---------------------------SOBRE MIM---------------------*/
+.background-color-sobre {
+    background-color: #191919;
+    width: 100%;
+    padding-top: 100px;
+}
+
+.background-color-sobre img {
+    width: 600px;
+    height: auto;
+}
+
+.Main-sobre {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: 2px solid red;
+}
+
+.text-sobre {
+    width: 550px;
+}
+
+.text-sobre h2 {
+    color: white;
+    font-size: 75px;
+    text-transform: uppercase;
+    /*Primeiras letra em maiusculo*/
+    margin-bottom: 20px;
+}
+
+.text-sobre h5 {
+    color: white;
+    letter-spacing: 5px;
+    font-size: 22px;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    font-family: 'Times New Roman', Times, serif;
+}
+
