@@ -8,6 +8,12 @@
     font-family: sans-serif, tahoma;
 }
 
+:root {
+    --rosa: #f9004d;
+    --preto: #191919;
+
+}
+
 .background {
     background-image: url(./Img/Astronalta.jpg);
     background-position: center;
@@ -55,11 +61,11 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #f9004d;
+    color: var(--rosa);
 }
 
 .btn {
-    background-color: #f9004d;
+    background-color: var(--rosa);
     color: white;
     text-decoration: none;
     font-weight: bold;
@@ -94,7 +100,7 @@ h1 {
 }
 
 span {
-    color: #f9004d;
+    color: var(--rosa);
     font-family: 'Neuton', serif;
 }
 
@@ -128,7 +134,7 @@ h3 {
     border-radius: 30px;
     color: white;
     box-shadow: 0px 0px 5px #000, 0px 0px 15px #858585;
-    background-color: #f9004d;
+    background-color: var(--rosa);
     right: 6px;
     top: 6px;
 }
@@ -136,6 +142,8 @@ h3 {
 .Container-btn form input:last-child:hover {
     transform: scale(0.9);
 }
+
+
 
 /*---------------------------SOBRE MIM---------------------*/
 .background-color-sobre {
@@ -153,7 +161,6 @@ h3 {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    border: 2px solid red;
 }
 
 .text-sobre {
@@ -175,5 +182,92 @@ h3 {
     margin-bottom: 20px;
     text-transform: capitalize;
     font-family: 'Times New Roman', Times, serif;
+}
+
+.text-sobre p {
+    color: #fcfc;
+    letter-spacing: 1px;
+    line-height: 27px;
+    /*Distância entre as linhas do texto*/
+    font-size: 18px;
+    margin-bottom: 45px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.buttom {
+    color: white;
+    background-color: var(--rosa);
+    text-transform: capitalize;
+    border: 2px solid transparent;
+    border-radius: 30px;
+    margin-bottom: 30px;
+    font-weight: bolder;
+    padding: 13px 20px;
+    transition: .4s;
+}
+
+.buttom:hover {
+    background-color: transparent;
+    border: 2px solid var(--rosa);
+    cursor: pointer;
+}
+
+.container-projetos {
+    background-color: #101010;
+    width: 100%;
+    padding: 100px 0px;
+    /*100px vai apenas para vertical e a horizontal fica em 0*/
+}
+
+.title h2 {
+    color: white;
+    font-size: 75px;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.Caixa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    flex-wrap: wrap;
+    /* Ele quebra linha para conseguir caber em todo o container*/
+}
+
+.card {
+    background-color: var(--preto);
+    height: 365px;
+    width: 335px;
+    border: 20px;
+    border-radius: 20px;
+    margin: 15px;
+    position: relative;
+    text-align: center;
+}
+
+.card i {
+    font-size: 50px;
+    display: block;
+    text-align: center;
+    margin: 25px 0px;
+    color: var(--rosa);
+}
+
+.card h5 {
+    color: white;
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #fcfc;
+    font-size: 16px;
+    line-height: 27px;
+    margin-bottom: 25px;
+}
+
+.btn{
+    border: none;
 }
 
