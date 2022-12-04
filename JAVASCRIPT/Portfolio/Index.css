@@ -157,6 +157,47 @@ h3 {
     height: auto;
 }
 
+aside {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    overflow: hidden;
+
+}
+
+.icone-menu .menu {
+    font-size: 30px;
+    color: white;
+    margin-top: 15px;
+    margin-right: 15px;
+    display: none;
+}
+
+#barra-menu {
+    background: #191919;
+    height: 100vh;
+    width: 180px;
+    transition: 0.3s all;
+
+}
+
+#barra-menu ul li {
+    list-style: none;
+    /*Tirando os pontinhos preto da lateral da lista*/
+    padding: 15px;
+}
+
+#barra-menu ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+#barra-menu ul li a:hover {
+    color: var(--rosa);
+    transition: 0.5s;
+}
+
 .Main-sobre {
     display: flex;
     align-items: center;
@@ -344,6 +385,14 @@ footer p {
 }
 
 .redesSociais a:hover {
- transform: scale(1.2);
- transition: .2s;   
+    transform: scale(1.2);
+    transition: .2s;
+}
+
+.End p {
+    position: relative;
+    color: var(--rosa);
+    letter-spacing: normal;
+    top: 35px;
+    font-size: 14px;
 }
