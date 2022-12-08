@@ -163,7 +163,6 @@ aside {
     right: 0;
     display: flex;
     overflow: hidden;
-
 }
 
 .icone-menu .menu {
@@ -171,13 +170,13 @@ aside {
     color: white;
     margin-top: 15px;
     margin-right: 15px;
-    display: none;
+    border: 2px solid red;
 }
 
 #barra-menu {
     background: #191919;
     height: 100vh;
-    width: 180px;
+    width: 0px;
     transition: 0.3s all;
 
 }
@@ -189,13 +188,27 @@ aside {
 }
 
 #barra-menu ul li a {
-    text-decoration: none;
     color: white;
+    text-decoration: none;
+    font-size: px;
+    width: 100%;
+    text-transform: capitalize;
+}
+
+.C-icon {
+    margin-top: 100%;
+    display: flex;
+    border: solid 2px red;
+    justify-content: center;
 }
 
 #barra-menu ul li a:hover {
-    color: var(--rosa);
+    border: 2px solid none;
+    padding: 10px;
     transition: 0.5s;
+    background: var(--rosa);
+    border-radius: 20px;
+    cursor: pointer;
 }
 
 .Main-sobre {
@@ -395,4 +408,32 @@ footer p {
     letter-spacing: normal;
     top: 35px;
     font-size: 14px;
+}
+
+@media screen and (max-width:375px) {
+    .icone-menu .menu {
+        display: block;
+    }
+
+    #barra-menu {
+        height: 100vh;
+        z-index: 1;
+    }
+
+    .C-icon {
+        background-color: var(--rosa);
+        color: white;
+        text-transform: none;
+        border: 2px solid transparent;
+        font-weight: bold;
+        padding: 10px;
+        border-radius: 30px;
+        width: 100px;
+        margin-left: 40px;
+    }
+
+    .Main h1 h3{
+        font-size: 80px;
+    }
+
 }
