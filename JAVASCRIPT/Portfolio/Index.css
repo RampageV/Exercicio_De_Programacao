@@ -161,8 +161,9 @@ aside {
     position: absolute;
     top: 0;
     right: 0;
-    display: flex;
+
     overflow: hidden;
+    display: none;
 }
 
 .icone-menu .menu {
@@ -170,13 +171,12 @@ aside {
     color: white;
     margin-top: 15px;
     margin-right: 15px;
-    border: 2px solid red;
 }
 
 #barra-menu {
     background: #191919;
     height: 100vh;
-    width: 0px;
+    width: 180px;
     transition: 0.3s all;
 
 }
@@ -410,14 +410,27 @@ footer p {
     font-size: 14px;
 }
 
+/*----------------------------------------------------MEDIA QUERY 375px---------------------------------------*/
 @media screen and (max-width:375px) {
+    .cabeçalho-link {
+        display: none;
+    }
+
+    .btn{
+        display: none;
+    }
+
+    aside {
+        display: flex;
+    }
+
     .icone-menu .menu {
         display: block;
     }
 
     #barra-menu {
         height: 100vh;
-        z-index: 1;
+
     }
 
     .C-icon {
@@ -473,7 +486,12 @@ footer p {
         margin-left: 15px;
     }
 
-    .text-sobre button{
+    .text-sobre button {
         margin-left: -180px;
     }
+
+    .me-contate p {
+        font-size: 27px;
+    }
+
 }
