@@ -74,15 +74,16 @@ form a {
 
 .casa {
     display: flex;
-    border: 1px solid red;
     flex-direction: row;
     align-items: center;
     font-weight: bold;
-   
+    margin-top: 30px;
+    margin-bottom: 30px;
+    max-width: 100%;
 }
 
 .oi {
-    width: 150px;
+    width: 100px;
     height: 0px;
     border: 1px solid #e6e6fa;
     margin: 7px;
@@ -90,8 +91,31 @@ form a {
 }
 
 .oii {
-    width: 150px;
+    width: 100px;
     height: 0px;
     border: 1px solid #e6e6fa;
     margin: 7px;
+}
+
+.Icone {
+    margin-top: 30px;
+}
+
+.fa-instagram {
+    color: white;
+    border: 1px solid var(--verdeAzulado);
+    padding: 5px;
+    border-radius: 50%;
+    background-color: var(--verdeAzulado);
+    font-size: 30px;
+    margin-right: 13px;
+}
+
+.fa-whatsapp {
+    color: white;
+    border: 1px solid var(--verdeAzulado);
+    padding: 5px;
+    border-radius: 50%;
+    background-color: var(--verdeAzulado);
+    font-size: 30px;
 }
