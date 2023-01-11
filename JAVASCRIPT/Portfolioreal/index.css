@@ -10,14 +10,13 @@ body {
 }
 
 .background {
-    border: solid 1px red;
     padding-top: 6%;
 }
 
 /*---------------------------------------------CONTATO---------------------------------------*/
 .contato {
     position: fixed;
-    right: 75%;
+    right: 79%;
     width: 17%;
     margin-right: 20px;
     display: flex;
@@ -111,30 +110,36 @@ body {
 
 /*---------------------------------------------MENU---------------------------------------*/
 .menu {
-    width: 70%;
-    margin-left: 25%;
-    height: 300vh;
+    position: relative;
+    width: 75%;
+    margin-left: 22%;
+    height: 100vh;
     border-radius: 18px;
-    
     background-color: #1c1d1e;
+    overflow: hidden;
 }
 
-nav {}
+nav {
+    width: 100%;
+    position: absolute;
+    margin-right: 0px;
+}
 
 nav ul {
+    width: 100%;
     list-style: none;
-    background:#313331 ;
+    background: #313331;
     display: flex;
-    border: solid 1px transparent;
-    margin-left: 68%;
     border-radius: 7px;
     font-size: 18px;
     padding: 10px;
 }
 
 nav ul li a {
+    
     text-transform: capitalize;
     text-decoration: none;
     padding-left: 30px;
-    color: white;
+    color: #aaabad;
+
 }
