@@ -111,7 +111,7 @@ body {
 /*---------------------------------------------MENU---------------------------------------*/
 .menu {
     position: relative;
-    width: 75%;
+    width: 70%;
     margin-left: 22%;
     height: 100vh;
     border-radius: 18px;
@@ -149,6 +149,8 @@ nav ul li a {
     text-transform: capitalize;
     text-decoration: none;
     padding-left: 30px;
+    padding-right: 30px;
+    font-size: 20px;
     color: #aaabad;
 }
 
