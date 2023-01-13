@@ -119,11 +119,21 @@ body {
     overflow: hidden;
 }
 
-nav {
-    width: 100%;
+.ChamandoNome{
     position: absolute;
-    margin-right: 0px;
+    color: white;
+    margin-left: 40px;
+    margin-top: 15px;
+    font-size: 25px;
+    text-transform: capitalize;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
 }
+nav {
+    position: absolute;
+    right: 0px;
+}
+
 
 nav ul {
     width: 100%;
@@ -136,10 +146,13 @@ nav ul {
 }
 
 nav ul li a {
-    
     text-transform: capitalize;
     text-decoration: none;
     padding-left: 30px;
     color: #aaabad;
+}
 
+li a:hover {
+    color: #d7bf8a;
+    transition: 0.5s;
 }
