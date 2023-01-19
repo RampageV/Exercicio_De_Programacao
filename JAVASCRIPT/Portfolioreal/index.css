@@ -122,11 +122,11 @@ body {
 .ChamandoNome{
     position: absolute;
     color: white;
-    margin-left: 40px;
-    margin-top: 15px;
+    margin-left: 5%;
+    margin-top:2%;
     font-size: 25px;
     text-transform: capitalize;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Courier New', Courier, monospace
 
 }
 nav {
@@ -157,4 +157,11 @@ nav ul li a {
 li a:hover {
     color: #d7bf8a;
     transition: 0.5s;
+}
+
+.Sobre{
+    color: white;
+    border: solid 1px red;
+    font-size: 16px;
+    margin: 65px 20px 20px 20px;
 }
