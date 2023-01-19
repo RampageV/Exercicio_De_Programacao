@@ -119,16 +119,16 @@ body {
     overflow: hidden;
 }
 
-.ChamandoNome{
+.ChamandoNome {
     position: absolute;
     color: white;
     margin-left: 5%;
-    margin-top:2%;
+    margin-top: 2%;
     font-size: 25px;
     text-transform: capitalize;
     font-family: 'Courier New', Courier, monospace
-
 }
+
 nav {
     position: absolute;
     right: 0px;
@@ -159,9 +159,24 @@ li a:hover {
     transition: 0.5s;
 }
 
-.Sobre{
+.Sobre {
     color: white;
-    border: solid 1px red;
     font-size: 16px;
     margin: 65px 20px 20px 20px;
+}
+
+.containerSobre {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.containerSobre img {
+   width: 100%;
+   margin-right: 20%;
+   margin-left: 20px;
+}
+.containerSobre p{
+    color: white;
+    text-align: center;
 }
