@@ -113,7 +113,7 @@ body {
     position: relative;
     width: 70%;
     margin-left: 22%;
-    height: 100vh;
+    height: 100%;
     border-radius: 18px;
     background-color: #1c1d1e;
     overflow: hidden;
@@ -122,8 +122,8 @@ body {
 .ChamandoNome {
     position: absolute;
     color: white;
-    margin-left: 5%;
-    margin-top: 2%;
+    margin-left: 2%;
+    margin-top: 4%;
     font-size: 25px;
     text-transform: capitalize;
     font-family: 'Courier New', Courier, monospace
@@ -159,24 +159,30 @@ li a:hover {
     transition: 0.5s;
 }
 
+#BarraAmarela {
+    position: absolute;
+    border-radius: 20px;
+    background-color: #f2cc7d;
+    width: 30px;
+    height: 4px;
+    margin-top: 75px;
+    margin-left: 20px;
+    display: none;
+}
+
 .Sobre {
+    display: flex;
+    flex-direction: column;
     color: white;
     font-size: 16px;
-    margin: 65px 20px 20px 20px;
-}
-
-.containerSobre {
-    width: 100%;
-    display: flex;
+    margin: 105px 20px 20px 20px;
     align-items: center;
+    color: #7c7d7d;
+
 }
 
-.containerSobre img {
-   width: 100%;
-   margin-right: 20%;
-   margin-left: 20px;
-}
-.containerSobre p{
-    color: white;
-    text-align: center;
+img {
+    margin-top: 20px;
+    width: 50%;
+    border-radius: 20px;
 }
