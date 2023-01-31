@@ -167,9 +167,8 @@ li a:hover {
     height: 4px;
     margin-top: 75px;
     margin-left: 20px;
-    display: none;
 }
-
+/*-------------------------------------------------SOBRE-----------------------------*/
 .Sobre {
     display: flex;
     flex-direction: column;
