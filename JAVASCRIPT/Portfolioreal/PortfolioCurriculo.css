@@ -108,6 +108,11 @@ body {
     margin-left: 5px;
 }
 
+h2{
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 /*---------------------------------------------MENU---------------------------------------*/
 .menu {
     position: relative;
@@ -168,6 +173,7 @@ li a:hover {
     margin-top: 75px;
     margin-left: 20px;
 }
+
 /*-----------------------------------------------------------CURRICULO-------------------------------*/
 .Curriculo {
     margin: 105px 20px 20px 20px;
@@ -175,35 +181,86 @@ li a:hover {
     flex-direction: column;
 
 }
-.educacao{
+
+.educacao {
     display: flex;
     width: fit-content;
     margin-left: 0px;
     align-items: center;
 
 }
-.educacao p{
+
+.educacao p {
     color: white;
     font-size: 20px;
     margin-left: 10px;
-    
+
 }
-.educacao i{
- 
+
+.educacao i {
     width: 100%;
     color: #d7bf8a;
     padding: 10px;
     border-radius: 25%;
     box-shadow: -2px 0px 0px 1px #303130;
 }
-.esfera{
+
+#TodosOsCursos {
+    padding-top: 20px;
+    margin-top: 0px;
+}
+
+.informacaoCurriculo {
+    display: flex;
+    align-items: baseline;
+}
+
+.EsferaComBarra {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin-top: 20px;
+    margin-left: 1.8%;
+}
+
+.informacaoDoCurriculo {
+    color: white;
+    margin-left: 2%;
+}
+
+.Esfera {
     width: 6px;
     height: 6px;
     border-radius: 100%;
     background-color: #f2cc7d;
-    margin-top: 20px;
+    margin-top: 0px;
     margin-left: 2%;
+    box-shadow: 0px 0px 10px white;
 }
-.EsferaComBarra{
+
+.Barra {
+    box-shadow: 0.5px 0px 0px 0.2px #303130;
+    width: 1px;
+    height: 100px;
+    margin-top: 1px;
+    margin-left: 2.3%;
+}
+
+.Curso {
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.instituicao {
+    padding-top: 3px;
+}
+
+.AnoCurso {
+    color: #f2cc7d;
     
+}
+
+.InformacaoCurso {
+    padding-top: 3px;
+    color:#7c7d7d;
 }
