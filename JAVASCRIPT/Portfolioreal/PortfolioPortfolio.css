@@ -180,6 +180,13 @@ li a:hover {
     margin: 105px 20px 20px 20px;
 }
 
+.Portfolio h3{
+    color:wheat;
+    text-transform: uppercase;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 40px;
+}
+
 .box0 {
     display: flex;
     width: 100%;
@@ -222,6 +229,7 @@ li a:hover {
 .NomeDoProjeto{
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 5px;
 }
 
 .TipoDoProjeto{
