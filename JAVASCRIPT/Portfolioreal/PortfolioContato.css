@@ -4,14 +4,9 @@
     box-sizing: border-box;
 }
 
-
 body {
     background-color: #111210;
 
-}
-
-a {
-    text-decoration: none;
 }
 
 .background {
@@ -113,6 +108,12 @@ a {
     margin-left: 5px;
 }
 
+h2 {
+    font-size: 33px;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 /*---------------------------------------------MENU---------------------------------------*/
 .menu {
     position: relative;
@@ -174,62 +175,63 @@ li a:hover {
     margin-left: 20px;
 }
 
-/*-------------------------------------------PORTFOLIO--------------------------------*/
+/*-----------------------------------------CONTATO---------------------------------*/
 
-.Portfolio {
+.Contato {
     margin: 105px 20px 20px 20px;
 }
 
-.Portfolio h3{
-    color:wheat;
-    text-transform: uppercase;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin-top: 60px;
-    margin-bottom: 5px;
-}
-
-.box0 {
-    display: flex;
+iframe {
     width: 100%;
-    height: fit-content;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
 }
 
-.box1 {
-    width: 100%;
-    height: 200px;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+form{
+    border: solid 1px red;
 }
 
-.box2 {
-    background-color: white;
-    border-radius: 10px;
-    width: 80%;
-    height: 80%;
-    transition: .4s;
+.formulario {
+    position: relative;
+    border: solid 1px red;
+    padding: 20px 45px;
 }
 
-.box2:hover{
-    transition: .4s;
-    padding: 5px;
-}
-
-.box2 img {
-    border-radius: 10px;
-    width: 100%;
-    height: 100%;
-}
-
-.NomeDoProjeto{
+legend {
     color: white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin-top: 5px;
+    font-size: 30px;
 }
 
-.TipoDoProjeto{
-   color: #7c7d7d;  
+.container {
+    display: flex;
+
+}
+
+#name {
+    margin-right: 20px;
+}
+
+.container input {
+    margin-top: 20px;
+    width: 100%;
+    padding: 20px;
+}
+
+textarea {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+
+#buttonEnviar {
+    background-color: #d7bf8a;
+    position: absolute;
+    right: 45px;
+    bottom: 0px;
+    border: none;
+    cursor: pointer;
+    border-radius: 15px;
+    padding: 0px 10px;
 }
