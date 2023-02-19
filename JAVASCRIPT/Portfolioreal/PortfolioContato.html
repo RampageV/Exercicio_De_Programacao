@@ -60,7 +60,7 @@
         </div>
 
         <div class="menu">
-            <p class="ChamandoNome">Portfólio</p>
+            <p class="ChamandoNome">Contato</p>
             <div id="BarraAmarela"></div>
 
             <nav>
@@ -83,6 +83,7 @@
 
 
                         <form action="https://api.staticforms.xyz/submit" method="POST">
+                            
                             <legend>Contact Form</legend>
 
                             <input type="hidden" name="accessKey" value="717eb3ef-34c0-4060-9826-4a6d31f6af22">
@@ -93,12 +94,17 @@
                                 <input type="email" name="email" placeholder="Digite seu email" autocomplete="off"
                                     required>
                             </div>
-                            <textarea name="message" cols="30" rows="10" placeholder="Sua mensagem"></textarea>
+                            <textarea name="message" cols="30" rows="8" placeholder="Sua mensagem"></textarea>
 
-                            
-                                <button type="submit" id="buttonEnviar">Enviar</button>
 
-                          
+                            <button type="submit" id="buttonEnviar">
+                                <div class="ContainerEnviar">
+                                    <i class="fa-regular fa-comment"></i>
+                                    <p>Enviar</p>
+                                </div>
+                            </button>
+
+
 
                             <input type="hidden" name="redirectTo"
                                 value="http://127.0.0.1:5500/JAVASCRIPT/Portfolioreal/Agradecimento.html">
