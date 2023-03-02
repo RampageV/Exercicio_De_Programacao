@@ -350,20 +350,42 @@ section h2 {
 }
 
 @media(min-width:1024px) {
-    .menu {
-        margin-left: 250px;
-    }
-    .email p {
-        text-align: justify;
+    .Nav480px {
+        display: none;
     }
 
-    .Sobre {
-        font-size: 23px;
+    .nav {
+        display: flex;
+    }
+
+    .contato {
+        width: 19%;
+
+    }
+
+    .menu {
+        margin-left: 25%;
     }
 
     .nav ul li a {
-        font-size: 21px;
+        font-size: 17px;
+        
     }
-}
 
-@media(min-width:1200px) {}
+    .Atualidade {
+        font-size: 13px;
+    }
+
+    .informacao p {
+        font-size: 9px;
+    }
+
+    .ChamandoNome {
+        font-size: 25px;
+    }
+
+    .Sobre {
+        font-size: 13px;
+    }
+
+}
