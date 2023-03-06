@@ -299,9 +299,108 @@ li a:hover {
     transition-duration: 1s;
 }
 
-.download:hover{
+.download:hover {
     color: wheat;
 }
 
 /*--------------------------------------MEDIAQUERY-----------------------------------*/
 
+@media (min-width:480px) {
+
+    /*Barra de Navegação*/
+    .Nav480px {
+        display: flex;
+        width: 100%;
+        position: static;
+        border: solid 1px red;
+    }
+
+    .Nav480px ul li {
+        width: 100%;
+    }
+
+    .Nav480px ul li a {
+        font-size: 15px;
+        padding-right: 40px;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    /*Contato*/
+
+    .contato {
+        width: 170px;
+        left: 25px;
+    }
+
+    .email p {
+        font-size: 8px;
+    }
+
+    .menu {
+        width: 55%;
+        margin-left: 210px;
+    }
+
+    @media (min-width:768px) {
+        .Nav480px {
+            display: none;
+        }
+
+        .nav {
+            display: flex;
+            width: 80%;
+
+        }
+
+        .nav ul {
+            margin-left: 13%;
+        }
+
+        .nav ul li {
+            text-align: center;
+            width: 100%;
+
+        }
+
+        .nav ul li a {
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+            text-align: center;
+            padding-left: 15px;
+        }
+
+        .contato {
+            width: 170px;
+            left: 35px;
+        }
+
+        .menu {
+            width: 68%;
+            margin-left: 230px;
+        }
+
+    }
+
+    @media (min-width:1024px) {
+
+        .background {
+            border: solid 1px green;
+        }
+
+        .nav ul li a {
+            font-size: 20px;
+        }
+
+    }
+
+    @media (min-width:1200px) {
+
+        .background {
+            border: solid 1px red;
+        }
+    }
+}
