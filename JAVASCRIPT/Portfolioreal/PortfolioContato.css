@@ -219,10 +219,11 @@ legend {
     background-color: #1c1d1e;
     border: none;
     outline: none;
-    font-size:15px;
+    font-size: 15px;
     color: white;
 }
-.container input:focus{
+
+.container input:focus {
     border: solid 1px #f2cc7d;
 }
 
@@ -236,11 +237,11 @@ textarea {
     background-color: #1c1d1e;
     border: none;
     outline: none;
-    font-size:15px;
+    font-size: 15px;
     color: white;
 }
 
-textarea:focus{
+textarea:focus {
     border: solid 1px #f2cc7d;
 }
 
@@ -254,10 +255,10 @@ textarea:focus{
     padding: 0px 10px;
     background-color: #1c1d1e;
     box-shadow: -1px 0px 0px 1px #303130;
-    
+
 }
 
-.ContainerEnviar{
+.ContainerEnviar {
     color: #f2cc7d;
     font-size: 20px;
     display: flex;
@@ -268,7 +269,132 @@ textarea:focus{
 
 }
 
-.ContainerEnviar i{
+.ContainerEnviar i {
     font-size: 20px;
     margin-right: 5px;
+}
+
+@media (min-width:480px) {
+
+    /*Barra de Navegação*/
+    .Nav480px {
+        display: flex;
+        width: 100%;
+        position: static;
+    }
+
+    .Nav480px ul li {
+        width: 100%;
+    }
+
+    .Nav480px ul li a {
+        font-size: 15px;
+        padding-right: 40px;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    /*Contato*/
+    .contato {
+        width: 170px;
+        left: 25px;
+    }
+
+    .email p {
+        font-size: 8px;
+    }
+
+    .menu {
+        width: 55%;
+        margin-left: 210px;
+    }
+    /*Fim*/
+
+    .container{
+        display: block;
+    }
+
+}
+
+@media (min-width:768px){
+    .Nav480px {
+        display: none;
+    }
+
+    .nav {
+        display: flex;
+        width: 80%;
+
+    }
+
+    .nav ul {
+        margin-left: 13%;
+    }
+
+    .nav ul li {
+        text-align: center;
+        width: 100%;
+
+    }
+
+    .nav ul li a {
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+        text-align: center;
+        padding-left: 15px;
+    }
+
+    .contato {
+        width: 170px;
+        left: 35px;
+    }
+
+    .menu {
+        width: 68%;
+        margin-left: 230px;
+    }
+    /*Fim*/
+
+}
+
+@media (min-width:1024px){
+    /*Toda página css de 1024px tem que ter essa configuração*/
+    .Nav480px {
+           
+        display: none;
+    }
+
+    .nav {
+        display: flex;
+    }
+
+    .contato {
+        width: 19%;
+
+    }
+
+    .menu {
+        margin-left: 25%;
+    }
+
+    .nav ul li a {
+        font-size: 20px;
+    }
+
+
+    .informacao p {
+        font-size: 9px;
+    }
+
+    .ChamandoNome {
+        font-size: 25px;
+    }
+    /*Fim*/
+
+    .container{
+        display: flex;
+    }
 }

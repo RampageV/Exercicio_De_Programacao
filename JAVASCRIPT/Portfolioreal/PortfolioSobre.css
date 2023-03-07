@@ -350,6 +350,8 @@ section h2 {
 }
 
 @media(min-width:1024px) {
+
+    /*Toda página css de 1024px tem que ter essa configuração*/
     .Nav480px {
         display: none;
     }
@@ -371,9 +373,6 @@ section h2 {
         font-size: 20px;
     }
 
-    .Atualidade {
-        font-size: 13px;
-    }
 
     .informacao p {
         font-size: 9px;
@@ -381,6 +380,11 @@ section h2 {
 
     .ChamandoNome {
         font-size: 25px;
+    }
+    /*Fim*/
+
+    .Atualidade {
+        font-size: 13px;
     }
 
     .Sobre {

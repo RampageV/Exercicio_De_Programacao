@@ -276,7 +276,6 @@ li a:hover {
 }
 
 .ParteDoDownload {
-    border: solid 1px red;
     margin-top: 50px;
     margin-bottom: 50px;
 }
@@ -312,7 +311,6 @@ li a:hover {
         display: flex;
         width: 100%;
         position: static;
-        border: solid 1px red;
     }
 
     .Nav480px ul li {
@@ -387,20 +385,37 @@ li a:hover {
 
     @media (min-width:1024px) {
 
-        .background {
-            border: solid 1px green;
+        /*Toda página css de 1024px tem que ter essa configuração*/
+        .Nav480px {
+            display: none;
+        }
+
+        .nav {
+            display: flex;
+        }
+
+        .contato {
+            width: 19%;
+
+        }
+
+        .menu {
+            margin-left: 25%;
         }
 
         .nav ul li a {
             font-size: 20px;
         }
 
-    }
 
-    @media (min-width:1200px) {
-
-        .background {
-            border: solid 1px red;
+        .informacao p {
+            font-size: 9px;
         }
+
+        .ChamandoNome {
+            font-size: 25px;
+        }
+        /*Fim*/
     }
+
 }
