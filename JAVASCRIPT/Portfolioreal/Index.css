@@ -260,6 +260,27 @@ section h2 {
     margin-left: 15px;
 }
 
+@media (min-width:350px) {
+    /*Barra de Pesquisa*/
+    .nav{
+        display: none;
+    }
+    .menu,.contato{
+        margin-top: 50px;
+    }
+
+    .Nav480px ul li a{
+        font-size: 10px; 
+        padding: 16px;
+    }
+
+    .Nav480px{
+        width: 100%;
+        border: solid red 1px;
+    }
+    /*FIM*/
+}
+
 @media (min-width: 480px) {
 
     /*Barra de pesquisa*/
@@ -381,6 +402,7 @@ section h2 {
     .ChamandoNome {
         font-size: 25px;
     }
+
     /*Fim*/
 
     .Atualidade {
