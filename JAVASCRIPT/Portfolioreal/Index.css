@@ -261,24 +261,86 @@ section h2 {
 }
 
 @media (min-width:350px) {
+
     /*Barra de Pesquisa*/
-    .nav{
+    .nav {
         display: none;
     }
-    .menu,.contato{
+
+    .menu,
+    .contato {
         margin-top: 50px;
     }
-
-    .Nav480px ul li a{
-        font-size: 10px; 
-        padding: 16px;
+    .Nav480px ul li{
+    width: 100%;
     }
 
-    .Nav480px{
+    .Nav480px ul li a {
+    
+        font-size: 10px;
+        padding: 15px;
+    }
+
+    .Nav480px {
         width: 100%;
         border: solid red 1px;
     }
+
+    .contato {
+        display: none;
+    }
+
+    .menu {
+        right: 50px;
+        width: 85%;
+    }
+
     /*FIM*/
+    section {
+        display: block;
+    }
+
+    h2{
+        text-align: center;
+    }
+
+    .menu {
+        height: fit-content;
+    }
+
+    .contato350px {
+        font-size: 13px;
+        padding-left: 20%;
+    }
+
+    .redessociais {
+        margin-left: 13%;
+    }
+
+    .informacaoPessoa {
+        color: white;
+    }
+
+    .nomecontato {
+        color: white;
+    }
+
+    .Atualidade {
+        display: block;
+    }
+
+    .ParagrafosGithub {
+        width: 70%;
+    }
+
+    .ParagrafosGithub h3 {
+        font-size: 17px;
+    }
+
+    .youtube {
+
+        margin-left: 0;
+    }
 }
 
 @media (min-width: 480px) {
