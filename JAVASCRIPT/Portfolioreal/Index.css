@@ -260,61 +260,82 @@ section h2 {
     margin-left: 15px;
 }
 
-@media (min-width:350px) {
+.contato350px{
+    display: none;
+}
+
+.Nav480px{
+    display: none;
+}
+
+@media (max-width:350px) {
 
     /*Barra de Pesquisa*/
     .nav {
         display: none;
     }
 
-    .menu,
-    .contato {
+    .menu {
         margin-top: 50px;
-    }
-    .Nav480px ul li{
-    width: 100%;
-    }
-
-    .Nav480px ul li a {
-    
-        font-size: 10px;
-        padding: 15px;
     }
 
     .Nav480px {
+        display: flex;
         width: 100%;
-        border: solid red 1px;
+    }
+
+    .Nav480px ul {
+        width: 100%;
+        text-align: center;
+    }
+
+    .Nav480px ul li {
+        width: 100%;
+       
+    }
+
+    .Nav480px ul li a {
+        font-size: 15px;
+        padding: 0px;
+
     }
 
     .contato {
         display: none;
     }
 
-    .menu {
-        right: 50px;
-        width: 85%;
-    }
-
     /*FIM*/
-    section {
+
+    .background {
         display: block;
     }
 
-    h2{
+    .menu {
+        margin: 50px auto;
+    }
+
+    h2 {
         text-align: center;
     }
 
-    .menu {
-        height: fit-content;
+    .contato350px {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        font-size: 13px;
     }
 
-    .contato350px {
-        font-size: 13px;
-        padding-left: 20%;
+    .informacao {
+        width: fit-content;
+    }
+
+    .informacaoPessoa {
+        width: fit-content;
     }
 
     .redessociais {
-        margin-left: 13%;
+        display: inline-block;
     }
 
     .informacaoPessoa {
@@ -343,55 +364,7 @@ section h2 {
     }
 }
 
-@media (min-width: 480px) {
-
-    /*Barra de pesquisa*/
-    .Nav480px {
-        display: flex;
-        width: 100%;
-        position: static;
-    }
-
-    .Nav480px ul li {
-        width: 100%;
-    }
-
-    .Nav480px ul li a {
-        font-size: 15px;
-        padding-right: 40px;
-    }
-
-    .nav {
-        display: none;
-    }
-
-    /*Contato*/
-
-    .contato {
-        width: 170px;
-        left: 25px;
-    }
-
-    .email p {
-        font-size: 8px;
-    }
-
-    .menu {
-        width: 60%;
-        margin-left: 210px;
-    }
-
-    .Atualidade {
-        display: block;
-    }
-
-    .youtube {
-
-        margin-left: 0;
-    }
-}
-
-@media (min-width:768px) {
+@media (max-width:768px){
 
     .Nav480px {
         display: none;
@@ -400,7 +373,11 @@ section h2 {
     .nav {
         display: flex;
         width: 80%;
+    }
 
+    .contato{
+        display: flex;
+        margin-top: 50px;
     }
 
     .nav ul li {
@@ -417,12 +394,12 @@ section h2 {
 
     .contato {
         width: 170px;
-        left: 35px;
+        left: 10px;
     }
 
     .menu {
         width: 68%;
-        margin-left: 230px;
+        margin-left: 250px;
     }
 
 
@@ -432,47 +409,3 @@ section h2 {
 
 }
 
-@media(min-width:1024px) {
-
-    /*Toda página css de 1024px tem que ter essa configuração*/
-    .Nav480px {
-        display: none;
-    }
-
-    .nav {
-        display: flex;
-    }
-
-    .contato {
-        width: 19%;
-
-    }
-
-    .menu {
-        margin-left: 25%;
-    }
-
-    .nav ul li a {
-        font-size: 20px;
-    }
-
-
-    .informacao p {
-        font-size: 9px;
-    }
-
-    .ChamandoNome {
-        font-size: 25px;
-    }
-
-    /*Fim*/
-
-    .Atualidade {
-        font-size: 13px;
-    }
-
-    .Sobre {
-        font-size: 16px;
-    }
-
-}
