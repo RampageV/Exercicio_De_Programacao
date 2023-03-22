@@ -260,15 +260,15 @@ section h2 {
     margin-left: 15px;
 }
 
-.contato350px{
+.contato350px {
     display: none;
 }
 
-.Nav480px{
+.Nav480px {
     display: none;
 }
 
-@media (max-width:350px) {
+@media (max-width:768px) {
 
     /*Barra de Pesquisa*/
     .nav {
@@ -291,7 +291,7 @@ section h2 {
 
     .Nav480px ul li {
         width: 100%;
-       
+
     }
 
     .Nav480px ul li a {
@@ -364,8 +364,8 @@ section h2 {
     }
 }
 
-@media (max-width:768px){
-
+@media (min-width:769px) and (max-width:1024px) {
+     /*Barra de pesquisa*/
     .Nav480px {
         display: none;
     }
@@ -375,7 +375,7 @@ section h2 {
         width: 80%;
     }
 
-    .contato{
+    .contato {
         display: flex;
         margin-top: 50px;
     }
@@ -393,19 +393,25 @@ section h2 {
     }
 
     .contato {
-        width: 170px;
-        left: 10px;
+        width: 200px;
+        left: 15px;
     }
 
     .menu {
+        margin-top: 50px;
         width: 68%;
-        margin-left: 250px;
+        margin-left: 235px;
+    }
+/*Fim*/
+
+    .github{
+       
+    height: 100%;
     }
 
-
-    .Atualidade {
-        display: flex;
+    .youtube{
+       
+        height: 100%;
     }
 
 }
-
