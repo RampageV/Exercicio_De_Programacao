@@ -355,61 +355,88 @@ li a:hover {
 
 }
 
-@media (min-width:769px) and (max-width:882px) {
+@media (min-width:769px) and (max-width:881px) {
+
     /*Barra de pesquisa*/
-   .Nav480px {
-       display: none;
-   }
+    .Nav480px {
+        display: none;
+    }
 
-   .nav {
-       display: flex;
-       width: 70%;
-   }
+    .nav {
+        display: flex;
+        width: 70%;
+    }
 
-   .contato {
-       display: flex;
-       margin-top: 50px;
-   }
+    .contato {
+        display: flex;
+        margin-top: 50px;
+    }
 
-   .nav ul li {
-       text-align: center;
-       width: 100%;
-   }
+    .nav ul li {
+        text-align: center;
+        width: 100%;
+    }
 
-   .nav ul li a {
-       justify-content: center;
-       align-items: center;
-       font-size: 10px;
-       text-align: center;
-   }
+    .nav ul li a {
+        justify-content: center;
+        align-items: center;
+        font-size: 10px;
+        text-align: center;
+    }
 
-   .contato {
-       width: 200px;
-       left: 15px;
-   }
+    .contato {
+        width: 200px;
+        left: 15px;
+    }
 
-   .menu {
-       margin-top: 50px;
-       width: 68%;
-       margin-left: 235px;
-   }
-/*Fim*/
+    .menu {
+        margin-top: 50px;
+        width: 68%;
+        margin-left: 235px;
+    }
+
+    /*Fim*/
 }
 
 @media (min-width:882px) and (max-width:1024px) {
+
     /*Barra de pesquisa*/
-   
-   .nav {
-       display: flex;
-       width: 70%;
-   }
+    .Nav480px {
+        display: none;
+    }
 
-   .nav ul li a {
-       font-size: 14px;
-   }
+    .nav {
+        display: flex;
+        width: 70%;
+    }
 
-/*Fim*/
+    .contato {
+        display: flex;
+        margin-top: 50px;
+    }
 
+    .nav ul li {
+        text-align: center;
+        width: 100%;
+    }
 
+    .nav ul li a {
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+        text-align: center;
+    }
 
+    .contato {
+        width: 200px;
+        left: 15px;
+    }
+
+    .menu {
+        margin-top: 50px;
+        width: 68%;
+        margin-left: 235px;
+    }
+
+    /*Fim*/
 }

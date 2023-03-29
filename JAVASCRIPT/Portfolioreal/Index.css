@@ -365,7 +365,8 @@ section h2 {
 }
 
 @media (min-width:769px) and (max-width:1024px) {
-     /*Barra de pesquisa*/
+
+    /*Barra de pesquisa*/
     .Nav480px {
         display: none;
     }
@@ -402,16 +403,7 @@ section h2 {
         width: 68%;
         margin-left: 235px;
     }
-/*Fim*/
 
-    .github{
-       
-    height: 100%;
-    }
-
-    .youtube{
-       
-        height: 100%;
-    }
-
+    /*Fim*/
 }
+
