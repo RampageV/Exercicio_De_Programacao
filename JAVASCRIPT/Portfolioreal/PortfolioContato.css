@@ -330,6 +330,10 @@ textarea:focus {
         display: block;
     }
 
+    ::-webkit-input-placeholder{
+        font-size: 10px;
+    }
+
 }
 
 @media (min-width:769px) and (max-width:881px) {
