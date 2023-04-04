@@ -93,7 +93,7 @@
 
 
 
-                        <form action="https://api.staticforms.xyz/submit" method="POST">
+                        <form action="https://api.staticforms.xyz/submit" name="wp_safe_redirect()" method="POST" >
 
                             <legend>Contact Form</legend>
 
@@ -103,7 +103,7 @@
                                 <input type="text" id="name" name="name" placeholder="Nome Completo" required>
                                 <input type="email" name="email" placeholder="Digite seu email" required>
                             </div>
-                            <textarea name="message" cols="30" rows="8" placeholder="Sua mensagem"></textarea>
+                            <textarea name="message" cols="30" rows="8" placeholder="Sua mensagem" required></textarea>
 
 
                             <button type="submit" id="buttonEnviar">
@@ -113,14 +113,14 @@
                                 </div>
                             </button>
 
+                            <input type="hidden" name="redirectTo" value="https://portfolioerickpessoa.netlify.app">
                         </form>
                     </div>
                 </section>
-
-
             </main>
         </div>
     </div>
+    <script src="Index.js"></script>
     <script src="https://kit.fontawesome.com/dd6ffeb679.js" crossorigin="anonymous"></script>
 </body>
 
