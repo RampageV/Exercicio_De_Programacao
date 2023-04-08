@@ -17,7 +17,6 @@ h1 {
 }
 
 .inputs {
-
     width: fit-content;
     margin: 0 auto;
     margin-top: 30px;
@@ -40,7 +39,7 @@ input::placeholder {
     padding-left: 10px;
 }
 
-button {
+.resultado {
     color: white;
     background-color: dodgerblue;
     width: 50px;
@@ -48,15 +47,27 @@ button {
     border-radius: 5px;
 }
 
-.informacao {
+.resultado:hover {
+    cursor: pointer;
+}
+
+.container {
+    width: 100%;
     display: flex;
+    justify-content: center;
+    text-align: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 17px;
-    justify-content: space-around;
+    text-transform: uppercase;
+    font-size: 25px;
     background-color: lightgray;
-    align-items: center;
-    margin: 0 auto;
     margin-top: 30px;
     height: 30px;
 }
 
+table {
+    width: 100%;
+}
+
+table tr td {
+   
+}

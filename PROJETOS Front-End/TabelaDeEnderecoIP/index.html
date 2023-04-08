@@ -17,23 +17,27 @@
 
         <!--Inputs-->
         <div class="inputs">
-            <input type="text" placeholder="IP">
-            <input type="text" placeholder="Mask">
-            <input type="text" placeholder="Version">
-            <button>Add</button>
+            <input type="text" id="TextInput" placeholder="IP">
+            <input type="text" id="TextMask"  placeholder="Mask">
+            <input type="text" id="TextVersao"  placeholder="Version">
+            <input type="button" class="resultado" value="Add" onclick="AdicionarInformacao(TextInput.value,TextMask.value, TextVersao.value)"/>
         </div>
 
-        <!--Informações dos Inputs-->
-        <div class="informacao">
-            <p>IP</p>
-            <p>Mask</p>
-            <p>Version</p>
+        <div class="container">
+            <Table id="informacao">
+                <thead>
+                    <tr>
+                        <td>ip</td>
+                        <td>mask</td>
+                        <td>version</td>
+                    </tr>
+
+                </thead>
+            </Table>
         </div>
 
     </div>
-
     <script src="Index.js"></script>
-    
 </body>
 
 </html>
