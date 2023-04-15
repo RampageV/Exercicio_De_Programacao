@@ -1,44 +1,90 @@
 <html>
 
 <head>
-  <script type="text/javascript">
-    function inserirRegistro() {
-      var tabela = document.getElementById('registros');
-
-      var nome = document.getElementById('inputNome').value;
-      var cpf = document.getElementById('inputCPF').value;
-      // Recupera a quantidade de linhas atuais
-      var linhasTotais = tabela.rows.length;
-
-      //adiciona a nova linha no fim da tabela
-      var novaLinha = tabela.insertRow(linhasTotais);
-
-      //adiciona duas células à linha criada
-      var novaCelulaNome = novaLinha.insertCell(0);
-      var novaCelulaCPF = novaLinha.insertCell(1);
-
-      //define o conteúdo das células criadas
-      novaCelulaNome.innerHTML = nome;
-      novaCelulaCPF.innerHTML = cpf;
-    }
-  </script>
+  <script type="text/javascript" src="table_script.js"></script>
 </head>
 
+<style>
+  td {
+    text-align: center;
+    border: 1px solid gray;
+  }
+
+  table {
+    text-align: center;
+  }
+</style>
+
 <body>
-  <table id="registros" border="1">
-    <tr>
-      <th>Nome</th>
-      <th>CPF</th>
-    </tr>
-    <tr>
-      <td>Maria Bonita</td>
-      <td>029.221.222-22</td>
-    </tr>
-  </table>
-  <br />
-  Nome: <input type="text" id="inputNome" /> <br />
-  CPF: <input type="text" id="inputCPF" /> <br />
-  <input type="button" onclick="inserirRegistro()" value="Inserir registro">
+  <div id="wrapper">
+    <table id="data_table">
+      <tr>
+        <th>Nome</th>
+        <th>CPF</th>
+        <th>RG</th>
+      </tr>
+      <tr>
+        <td><input type="text" id="new_name"></td>
+        <td><input type="text" id="new_cpf"></td>
+        <td><input type="text" id="new_rg"></td>
+        <td><input type="button" class="add" onclick="add_row();" value="Adicionar"></td>
+      </tr>
+    </table>
+  </div>
+
+
+  <script>
+    function edit_row(no) {
+      document.getElementById("edit_button" + no).style.display = "none";
+      document.getElementById("save_button" + no).style.display = "block";
+
+      var name = document.getElementById("nome_row" + no);
+      var cpf = document.getElementById("cpf_row" + no);
+      var rg = document.getElementById("rg_row" + no);
+
+      var name_data = name.innerHTML;
+
+
+      name.innerHTML = "<input type='text' id='name_text" + no + "' value='" + name_data + "'>";
+
+    }
+
+    function save_row(no) {
+      var name_val = document.getElementById("name_text" + no).value;
+
+
+      document.getElementById("nome_row" + no).innerHTML = name_val;
+
+
+      document.getElementById("edit_button" + no).style.display = "block";
+      document.getElementById("save_button" + no).style.display = "none";
+    }
+
+    function delete_row(no) {
+      document.getElementById("row" + no + "").outerHTML = "";
+    }
+
+    function add_row() {
+      var new_name = document.getElementById("new_name").value;
+      var new_cpf = document.getElementById("new_cpf").value;
+      var new_rg = document.getElementById("new_rg").value;
+
+      var table = document.getElementById("data_table");
+      var table_len = (table.rows.length) - 1;
+      var row = table.insertRow(table_len).outerHTML = "<tr id='row" + table_len + "'><td id='nome_row" +
+        table_len + "'>" + new_name + "</td><td id='cpf_row" + table_len + "'>" + new_cpf +
+        "</td><td id='rg_row" + table_len + "'>" + new_rg + "</td><td><input type='button' id='edit_button" +
+        table_len + "' value='Edit' class='edit' onclick='edit_row(" + table_len +
+        ")'> <input type='button' id='save_button" + table_len +
+        "' value='Salvar' class='save' onclick='save_row(" + table_len +
+        ")'> <input type='button' value='Deletar' class='delete' onclick='delete_row(" + table_len +
+        ")'></td></tr>";
+
+      document.getElementById("new_name").value = "";
+      document.getElementById("new_cpf").value = "";
+      document.getElementById("new_rg").value = "";
+    }
+  </script>
 </body>
 
 </html>
