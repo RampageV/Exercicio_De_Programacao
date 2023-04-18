@@ -1,29 +1,26 @@
 function AdicionarInformacao() {
 
     var tabela = document.getElementById("informacao");
-    var ipp = document.getElementById("TextInput").value;
+    var ipp = document.getElementById("TextInput").value
     var maskk = document.getElementById("TextMask").value;
     var versaoo = document.getElementById("TextVersao").value;
 
     var qtsLinhas = tabela.rows.length; // Contagem de linhas. 11
     var linha = tabela.insertRow(qtsLinhas); // Inserindo uma linha abaixo da quantidade total de linha. 
 
+
     var colunaIp = linha.insertCell(0); // Coluna do IP
     var colunaMask = linha.insertCell(1); // Coluna da Mask
     var colunaVersao = linha.insertCell(2); // Coluna da Versao
     var colunaExcluir = linha.insertCell(3); // Coluna do excluir
 
+    colunaIp.classList.add("New-row");
     colunaIp.innerHTML = ipp;
     colunaMask.innerHTML = maskk;
     colunaVersao.innerHTML = versaoo;
     EspaçoVazio();
-
+    excluir();
     editar();
-
-    document.getElementById("TextInput").value = null;
-    document.getElementById("TextMask").value = null;
-    document.getElementById("TextVersao").value = null;
-
 
     /*  -----------------------------------------------------------Funções------------------------------------------ */
     function EspaçoVazio() {
@@ -51,28 +48,42 @@ function AdicionarInformacao() {
 
             var clickElemento = event.target;
             if (clickElemento.classList.contains("btnEditar")) {
-                editar_row(event);
-                editar_salve(event);
+
+                var ipLinha = document.querySelector('.New-row')
+                console.log(ipLinha)
+                var ipvalor = ipLinha.innerHTML;
+                console.log(ipvalor)
+                ipLinha.innerHTML = "<td id='nome_row'> <input type='text' id='ip_text' value=' " + ipvalor + "'> </td>";
+                console.log(ipLinha)
+
+                editar_salve()
             }
         });
     }
 
-    
-    function editar_row(event) {
+    function editar_salve() {
 
-        var ip = document.getElementById("TextInput" + event);
+        document.querySelector(".btnEditar").style.display = "none";
 
-        var ip_info = ip.innerHTML;
+        var editar_salve = document.createElement("span")
+        editar_salve.classList.add("btnEditarSalve");
+        editar_salve.textContent = "Salvar"
 
-        ip.innerHTML = "<input type='text' id='Ip_text" + event + "' value='" + ip_info + "'>";
-    }
+        colunaExcluir.appendChild(editar_salve)
 
+        tabela.addEventListener("click", function (event) {
 
-    function editar_salve(event){
+            var clickElemento = event.target
+            if (clickElemento.classList.contains("btnEditarSalve")) {
 
-        var ip_value = document.getElementById("Ip_text" + event).value
+                var valorDoSalve = document.getElementById("ip_text").value
+                console.log(valorDoSalve)
+                document.querySelector('.New-row').innerHTML = valorDoSalve;
 
-        document.getElementById("TextInput" + event).innerHTML = ip_value;
+                document.querySelector(".btnEditar").style.display = "block"
+                document.querySelector(".btnEditarSalve").style.display = "none"
+            }
+        });
     }
 
 
