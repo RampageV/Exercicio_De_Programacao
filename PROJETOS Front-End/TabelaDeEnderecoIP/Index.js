@@ -22,6 +22,7 @@ function AdicionarInformacao() {
     colunaMask.innerHTML = maskk;
     colunaVersao.innerHTML = versaoo;
 
+    CorLinha()
     editar()
     salvar()
     EspaçoVazio()
@@ -57,7 +58,7 @@ function AdicionarInformacao() {
                 var ValorLinha = ipLinha.innerHTML;
                 ipLinha.innerHTML = "<input type='number' id='ip_text" + qtsLinhas + "' value='" + ValorLinha + "'> </td>";
 
-                console.log(ipLinha)
+
                 document.querySelector(".btnEditarSalve" + qtsLinhas).style.display = "inline"
                 document.querySelector(".btnEditar" + qtsLinhas).style.display = "none"
             }
@@ -77,7 +78,7 @@ function AdicionarInformacao() {
             var clickElemento = event.target
             if (clickElemento.classList.contains("btnEditarSalve" + qtsLinhas)) {
 
-                var valorDoSalve = document.getElementById("ip_text"+ qtsLinhas).value;
+                var valorDoSalve = document.getElementById("ip_text" + qtsLinhas).value;
                 document.querySelector(".New-cell" + qtsLinhas).innerHTML = valorDoSalve
 
                 document.querySelector(".btnEditarSalve" + qtsLinhas).style.display = "none"
@@ -102,10 +103,18 @@ function AdicionarInformacao() {
                 var celular = clickElemento.parentNode; // Pegando o elemento filho para conseguir acessar o elemento pai
                 var linha = celular.parentNode; // Pegando elemento pai para excluir os elementos filhos que estão dentro dele. 
                 linha.remove()
-
-                console
             }
         });
+    }
+
+
+    function CorLinha() {
+
+        if (qtsLinhas % 2 == 0) {
+            linha.style.background = '#C0C0C0';
+        }else{
+            linha.style.background = '#DCDCDC';
+        }
     }
 
     document.getElementById("TextInput").value = " ";

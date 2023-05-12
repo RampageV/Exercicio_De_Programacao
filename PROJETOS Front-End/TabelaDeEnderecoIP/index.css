@@ -59,7 +59,7 @@ input::placeholder {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-transform: uppercase;
     font-size: 25px;
-    background-color: lightgray;
+    background-color: black;
     margin-top: 30px;
     height: 45px;
 }
@@ -67,6 +67,11 @@ input::placeholder {
 table {
     width: 100%;
     border-spacing: 10px;
+    border-collapse: collapse; /*uni as colunas*/
+}
+
+.TdWhite{
+    color: white;
 }
 
 #btnExcluir {
