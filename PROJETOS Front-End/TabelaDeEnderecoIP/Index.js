@@ -6,8 +6,8 @@ function AdicionarInformacao() {
     var versaoo = document.getElementById("TextVersao").value;
 
 
-    var qtsLinhas = tabela.rows.length; // Contagem de linhas. 11
-    var linha = tabela.insertRow(qtsLinhas); // Inserindo uma linha abaixo da quantidade total de linha. 
+    var qtsLinhas = (tabela.rows.length); // Contagem de linhas. 11
+    var linha = tabela.insertRow(qtsLinhas); // Inserindo uma linha abaixo da quantidade total de linha.
 
     var colunaIp = linha.insertCell(0); // Coluna do IP
     var colunaMask = linha.insertCell(1); // Coluna da Mask
@@ -15,18 +15,23 @@ function AdicionarInformacao() {
     var colunaEditarESalve = linha.insertCell(3)
     var colunaExcluir = linha.insertCell(4); // Coluna do excluir
 
-
-    colunaIp.classList.add("New-cell" + qtsLinhas);
-
     colunaIp.innerHTML = ipp;
     colunaMask.innerHTML = maskk;
     colunaVersao.innerHTML = versaoo;
+
+    colunaIp.classList.add("New-cell-ip" + qtsLinhas);
+    colunaMask.classList.add("New-cell-mask" + qtsLinhas);
+    colunaVersao.classList.add("New-cell-versao" + qtsLinhas)
+
+
 
     CorLinha()
     editar()
     salvar()
     EspaçoVazio()
     excluir()
+
+
 
     /*  -----------------------------------------------------------Funções------------------------------------------ */
     function EspaçoVazio() {
@@ -54,10 +59,20 @@ function AdicionarInformacao() {
             var clickElemento = event.target
             if (clickElemento.classList.contains("btnEditar" + qtsLinhas)) {
 
-                var ipLinha = document.querySelector(".New-cell" + qtsLinhas)
-                var ValorLinha = ipLinha.innerHTML;
-                ipLinha.innerHTML = "<input type='number' id='ip_text" + qtsLinhas + "' value='" + ValorLinha + "'> </td>";
+                /* ip */
+                var ipLinha = document.querySelector(".New-cell-ip" + qtsLinhas)
+                var ValorLinhaIP = ipLinha.innerHTML;            
+                ipLinha.innerHTML = "<input type='number' id='ip_text" + qtsLinhas + "' value='" + ValorLinhaIP + "'> </td>";
 
+                /* Mask */
+                var masklinha = document.querySelector(".New-cell-mask" + qtsLinhas)
+                var ValorLinhaMask = masklinha;
+                masklinha.innerHTML = "<input type='number' id='mask_text" + qtsLinhas + "' value='" + ValorLinhaMask + "'> </td>";
+
+                /* Versão*/
+                var versaoLinha = document.querySelector(".New-cell-versao" + qtsLinhas)
+                var ValorVersao = versaoLinha.innerHTML;
+                versaoLinha.innerHTML = "<input type='number' id='versao_text" + qtsLinhas + "' value='" + ValorVersao + "'> </td>";
 
                 document.querySelector(".btnEditarSalve" + qtsLinhas).style.display = "inline"
                 document.querySelector(".btnEditar" + qtsLinhas).style.display = "none"
@@ -78,8 +93,17 @@ function AdicionarInformacao() {
             var clickElemento = event.target
             if (clickElemento.classList.contains("btnEditarSalve" + qtsLinhas)) {
 
-                var valorDoSalve = document.getElementById("ip_text" + qtsLinhas).value;
-                document.querySelector(".New-cell" + qtsLinhas).innerHTML = valorDoSalve
+                /*ip salvo */
+                var valorDoSalveIp = document.querySelector("#ip_text" + qtsLinhas).value;
+                document.querySelector(".New-cell-ip" + qtsLinhas).innerHTML = valorDoSalveIp;
+
+                /*mask salvo */
+                var valorDosalveMask = document.getElementById("mask_text" + qtsLinhas).value;
+                document.querySelector(".New-cell-mask" + qtsLinhas).innerHTML = valorDosalveMask;
+
+                /* Versão*/
+                var valorDoSalveVersao = document.getElementById("versao_text" + qtsLinhas).value;
+                document.querySelector(".New-cell-versao" + qtsLinhas).innerHTML = valorDoSalveVersao;
 
                 document.querySelector(".btnEditarSalve" + qtsLinhas).style.display = "none"
                 document.querySelector(".btnEditar" + qtsLinhas).style.display = "inline"
@@ -90,7 +114,6 @@ function AdicionarInformacao() {
     }
 
     function excluir() {
-
         var botaoExcluir = document.createElement("span");
         botaoExcluir.setAttribute("class", "fa-solid fa-x")
         botaoExcluir.classList.add("btnExcluir"); // Colocando a class btnExcluir dentro do botão span
@@ -107,17 +130,16 @@ function AdicionarInformacao() {
         });
     }
 
-
     function CorLinha() {
 
         if (qtsLinhas % 2 == 0) {
             linha.style.background = '#C0C0C0';
-        }else{
+        } else {
             linha.style.background = '#DCDCDC';
         }
     }
 
-    document.getElementById("TextInput").value = " ";
-    document.getElementById("TextMask").value = " ";
-    document.getElementById("TextVersao").value = " ";
+    document.getElementById("TextInput").value = "";
+    document.getElementById("TextMask").value = "";
+    document.getElementById("TextVersao").value = "";
 }
