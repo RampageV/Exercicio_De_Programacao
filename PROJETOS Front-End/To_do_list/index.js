@@ -24,8 +24,8 @@ const addTodo = (event) => {
     todoDiv.appendChild(completedButtom) // Adicionando completed button dentro da div
 
     const trashButtom = document.createElement('button')
-    trashButtom.innerHTML = '<i class="fa-solid fa-xmark"></i>';
     trashButtom.classList.add('trash-btn')
+    trashButtom.innerHTML = '<i class="fa-solid fa-xmark"></i>';
 
     todoDiv.appendChild(trashButtom) // Adicionando button delete dentro da div
 
@@ -36,16 +36,16 @@ const addTodo = (event) => {
 const deleteAndCheck = (e) => {
 
     const item = e.target;
+    const todo = item.parentElement;
 
-    if (item.classList[0] === 'trash-btn') {
+    if (item.classList[0] === 'trash-btn') { // Deleta
+        todo.classList.add('fall');
+        todo.addEventListener('transitioned', () => { // Efeito de transição quando algo é deletado
+            todo.remove();
+        });
 
-        const todo = item.parentElement;
-        todo.remove();
-
-    } else if (item.classList[0] == 'completed-btn') {
-
-        const todo = item.parentElement;
-        todo.classList.toggle('completed')
+    } else if (item.classList[0] == 'completed-btn') { // Completado
+        todo.classList.toggle('completed');
     }
 
 }
