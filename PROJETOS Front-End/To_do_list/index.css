@@ -9,9 +9,12 @@ body {
     min-width: 100vh;
 }
 
+header {
+    font-size: 1.5rem;
+}
+
 header,
 form {
-    font-size: 1.5rem;
     min-height: 20vh;
     display: flex;
     justify-content: center;
@@ -30,7 +33,7 @@ form button {
     color: #060827;
     background: #fff;
     cursor: pointer;
-    transition: all 1s;
+    transition: all 1s ease;
 }
 
 form button:hover {
@@ -50,7 +53,7 @@ form button:hover {
 }
 
 .todo {
-    margin-bottom: 10px;
+    margin: 0.5rem;
     background: white;
     color: black;
     font-size: 1.5rem;
@@ -65,7 +68,7 @@ form button:hover {
 }
 
 .trash-btn,
-.completed-btn {
+.complete-btn {
     background: #060827;
     color: #fff;
     border: none;
@@ -74,8 +77,12 @@ form button:hover {
     font-size: 1rem;
 }
 
-.completed-btn {
+.complete-btn {
     background: rgb(59, 140, 207);
+}
+
+.todo-item {
+    padding: 0rem 0.5rem;
 }
 
 .fa-xmark,
@@ -90,15 +97,10 @@ form button:hover {
 }
 
 .fall {
-    transform: translate(8rem) rotate(30deg);
+    transform: translate(8rem) rotate(20deg);
     opacity: 0;
 }
 
-.select {
-    margin: 1rem;
-    position: relative;
-    overflow: hidden;
-}
 
 select {
     border: none;
@@ -108,4 +110,27 @@ select {
     width: 10rem;
     cursor: pointer;
     padding: 1rem;
+}
+
+.select {
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.select::after {
+    /*Escolhendo o ultimo elemento filho do elemento pai (Mesma coisa de selecionar a tag option)*/
+    content: "\25BC";
+    position: absolute;
+    background: white;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    pointer-events: none;
+    transform: all 0.3 ease;
+}
+
+.select:hover::after {
+    background: black;
+    color: white;
 }
