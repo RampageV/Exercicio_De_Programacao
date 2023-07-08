@@ -1,12 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
     <title>To do List</title>
 </head>
+
 <body>
-    <script src="index.js"></script>
+
+    <div class="container">
+
+        <input class="input-task" type="text" placeholder="O que tenho que fazer">
+
+        <button class="button-add-task">Adicionar</button>
+
+        <ul class="list-tasks">
+            <li class="task">
+                <img src="img/checked.png" alt="check-na-tarefa">
+                <p>Tudo certo</p>
+                <img src="img/trash.png" alt="deleta-tarefa">
+            </li>
+        </ul>
+
+    </div>
+
 </body>
+
 </html>
