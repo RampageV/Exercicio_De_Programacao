@@ -1,3 +1,5 @@
+/*https://www.youtube.com/watch?v=k0roUpojoSE&t=1482s*/
+
 * {
     padding: 0;
     margin: 0;
@@ -44,21 +46,34 @@ body {
     opacity: 0.8;
 }
 
-.button-add-task:active{
+.button-add-task:active {
     opacity: 0.6;
 }
 
 img {
     height: 25px;
+    opacity: 0;
+    transition: opacity 0.5 ease-in-out;
 }
 
-.list-tasks{
+.list-tasks {
     width: 100%;
     list-style: none;
+    margin-top: 20px;
 }
 
-.task{
+.task {
     background-color: #f2f2f2;
     box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.2);
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    padding: 0 15px;
+    margin-bottom: 15px;
+}
+
+.task:hover img{
+    opacity: 1;
+    cursor: pointer;
 }
