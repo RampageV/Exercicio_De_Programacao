@@ -24,7 +24,7 @@ const mostraTarefa = () => {
 
         novaLi = novaLi + `
         
-        <li class="task">
+        <li class="task ${item.concluida && "done"}">
             <img src="img/checked.png" alt="check-na-tarefa" onclick="concluirTarefa(${index})">
             <p>${item.tarefa}</p>
             <img src="img/trash.png" alt="deleta-tarefa" onclick="deletaItem(${index})">
@@ -34,14 +34,34 @@ const mostraTarefa = () => {
     });
 
     ListaCompleta.innerHTML = novaLi;
+    LocalStorange()
+
 }
 
 const concluirTarefa = (index) => {
-    console.log(index)
+    minhaListaDeItens[index].concluida = !minhaListaDeItens[index].concluida
+    mostraTarefa()
 }
 const deletaItem = (index) => {
     minhaListaDeItens.splice(index, 1)
     mostraTarefa()
 }
 
+const LocalStorange = () => {
+
+    // Convertendo em string e guardando no localstorange.
+    localStorage.setItem('ListaDeArray', JSON.stringify(minhaListaDeItens))
+}
+
+const recarregarTarefas = () => {
+
+    const tarefasDoLocalStorange = localStorage.getItem('ListaDeArray')
+
+    if (tarefasDoLocalStorange) { // Se caso a lista no localstorage estiver vazio, não quero que ele adicione nada na "minhaListaDeItens"
+        minhaListaDeItens = JSON.parse(tarefasDoLocalStorange) // Convertendo de string para objeto.
+    }
+    mostraTarefa()
+}
+
+recarregarTarefas()
 button.addEventListener('click', AdicionarNovaTarefa)

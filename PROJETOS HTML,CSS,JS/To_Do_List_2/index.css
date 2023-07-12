@@ -77,3 +77,8 @@ img {
     opacity: 1;
     cursor: pointer;
 }
+
+.done{
+    background-color: #8fac55;
+    text-decoration: line-through;
+}
