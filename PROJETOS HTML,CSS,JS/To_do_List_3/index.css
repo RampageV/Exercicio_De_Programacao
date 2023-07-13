@@ -1,10 +1,10 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     background-color: black;
     color: white;
     display: flex;
@@ -13,9 +13,60 @@ body{
     gap: 4rem;
 }
 
-.content{
+.content {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 4rem;
+}
+
+.content--and--item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    /*Wrap, deixa o conteúdo responsivo */
+}
+
+#input-new-task,
+#btn-new-task {
+    border: none;
+    font-size: 1rem;
+    outline: none;
+    padding: 1rem;
+}
+
+#input-new-task{
+    width: 20rem;
+    border-radius: 1rem;
+}
+
+#btn-new-task{
+    background-color: black;
+    color: white;
+    border: solid 1px dimgrey;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: .4s;
+}
+
+#btn-new-task:hover{
+    background-color: dimgrey;
+}
+
+#to-do-list{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0;
+}
+
+#to-do-list li{
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    font-size: 1.4rem;
+    text-transform: capitalize;
 }
 
