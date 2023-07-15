@@ -35,12 +35,12 @@ body {
     padding: 1rem;
 }
 
-#input-new-task{
+#input-new-task {
     width: 20rem;
     border-radius: 1rem;
 }
 
-#btn-new-task{
+#btn-new-task {
     background-color: black;
     color: white;
     border: solid 1px dimgrey;
@@ -51,18 +51,18 @@ body {
     transition: .4s;
 }
 
-#btn-new-task:hover{
+#btn-new-task:hover {
     background-color: dimgrey;
 }
 
-#to-do-list{
+#to-do-list {
     display: flex;
     flex-direction: column;
     gap: 1rem;
     padding: 0;
 }
 
-#to-do-list li{
+#to-do-list li {
     display: flex;
     justify-content: space-around;
     list-style-type: none;
@@ -70,3 +70,15 @@ body {
     text-transform: capitalize;
 }
 
+#btn-ok {
+    color: black;
+    background-color: lawngreen;
+    border: none;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
