@@ -43,10 +43,20 @@ const toggleForms = () => {
     editForm.classList.toggle("hide");
     todoForm.classList.toggle("hide");
     todoList.classList.toggle("hide");
-}
+};
 
-const updateTodo = (text) =>{
+const updateTodo = (text) => {
 
+    const todos = document.querySelectorAll(".todo")
+
+    todos.forEach((todo) => {
+
+        let todoTitle = todo.querySelector("h3")
+
+        if (todoTitle.innerHTML === oldInputValue) {
+            todoTitle.innerHTML = text
+        }
+    });
 }
 
 //Eventos
@@ -68,7 +78,7 @@ document.addEventListener("click", (e) => {
 
     //Verifica se o title existe. Caso não exista, ele cria.
     if (parentEl && parentEl.querySelector("h3")) {
-        todoTitle.querySelector("h3").innerHTML;
+      todoTitle = parentEl.querySelector("h3").innerHTML;
     }
     if (targetEl.classList.contains("finish-todo")) {
         parentEl.classList.toggle("done"); // Se não tiver a classe ele coloca, se tiver, ele retira.
@@ -81,7 +91,7 @@ document.addEventListener("click", (e) => {
         toggleForms()
 
         editInput.value = todoTitle
-        oldInputValue.value = todoTitle
+        oldInputValue = todoTitle
     }
 });
 
