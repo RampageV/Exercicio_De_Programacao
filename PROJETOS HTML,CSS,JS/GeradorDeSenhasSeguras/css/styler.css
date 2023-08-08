@@ -131,3 +131,7 @@ input:focus {
     cursor: pointer;
     align-self: flex-end;
 }
+
+#register-form input[type="submit"]:hover{
+    opacity: 1;
+}
