@@ -73,26 +73,31 @@ const generatePassword = (getLetterLowerCase, getLetterUppCase, getNumber, getSy
         getNumber,
         getSymbol
     ]
-
+    //Aqui vai gera no final 12 caracteres, porque está indo de 4 em 4
     for (i = 0; i < passwordLenght; i = i + generators.length) {
 
         // Vamos passar um valor aleatório para cada função.
         generators.forEach(() => {
-            
+
             // Pra cada função dessa, a gente está gerando um valor aleatório.
             // Se coloca um () no final, porque ele é uma função com uma lista de funções.
             const randomValue = generators[Math.floor(Math.random() * generators.length)]()
-console.log(randomValue)
-            password += randomValue 
+
+            password += randomValue
         });
     }
+
+    password = password.slice(0, passwordLenght) /* Como estava 12 caracteres, eu deletei os dois ultimos para ficar 10. O passwordLenght é igual a 10, então vai de 0 a 10 */
+   
+    generatedPasswordElement.style.display = "block";
+    generatedPasswordElement.querySelector("h4").innerText = password;
 }
 
 //Evento
 generatePasswordButtom.addEventListener("click", () => {
     generatePassword(
-        getLetterLowerCase,getLetterUppCase,
+        getLetterLowerCase, getLetterUppCase,
         getNumber,
         getSymbol
-      );
+    );
 });
