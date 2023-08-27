@@ -34,7 +34,6 @@ div.gerador-senha p {
 
 div.gerador-senha p::after {
     content: "Copiada ";
-    position: absolute;
     font-size: 1.2rem;
     /*1 rem é igual a 10 px, então 3rem é que vale a 30px*/
     color: white;
@@ -42,6 +41,14 @@ div.gerador-senha p::after {
     background-color: mediumseagreen;
     border-radius: 5px;
     padding: 4px;
+    position: absolute;
+    opacity: 0;
+    transition: 1s;
+}
+
+div.gerador-senha p.copiada::after{
+    opacity: 1;
+    transition: 1s;
 }
 
 div.gerador-senha button {
