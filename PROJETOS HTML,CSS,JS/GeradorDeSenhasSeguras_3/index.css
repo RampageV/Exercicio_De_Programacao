@@ -22,14 +22,17 @@ body {
 div.gerador-senha {
     display: grid;
     grid-template-columns: 1fr;
+    text-align: center;
     /*Deixa o grid apenas com uma coluna*/
 }
 
-div.gerador-senha p {
+div.gerador-senha p { 
     font-size: 3.2rem;
     /*1 rem é igual a 10 px, então 3rem é que vale a 30px*/
     color: white;
-    margin: 2rem;
+    margin: 1.2rem auto;
+    cursor: pointer;
+    position: relative;
 }
 
 div.gerador-senha p::after {
@@ -46,16 +49,21 @@ div.gerador-senha p::after {
     transition: 1s;
 }
 
-div.gerador-senha p.copiada::after{
+div.gerador-senha p.copiada::after {
     opacity: 1;
     transition: 1s;
 }
 
 div.gerador-senha button {
     padding: 1.2rem;
-    margin: 1.2rem;
+    margin: 1.2rem auto;
     font-size: 2.4rem;
     border-radius: 5px;
     border: none;
     background-color: rgba(255, 224, 0, 1);
+    cursor: pointer;
+}
+
+div.gerador-senha button:disabled {
+    cursor: default;
 }

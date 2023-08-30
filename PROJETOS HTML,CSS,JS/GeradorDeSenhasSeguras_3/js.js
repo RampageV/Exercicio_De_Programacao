@@ -6,6 +6,8 @@ const carateres = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "
     "1", "2", "3", "4", "5", "6", "7", "8", "9"
 ];
 let senha = '';
+let intervalo;
+
 
 const geraSenha = () => {
     for (let i = 1; i <= 12; i++) {
@@ -13,11 +15,33 @@ const geraSenha = () => {
     }
     senhaElemento.innerHTML = senha;
 
-    senha = "";
+    senha = '';
 }
 
-const efeitoGerarSenha = 
+
+const efeitoGerarSenha = () => {
+
+    intervalo = setInterval(() => {
+        geraSenha();
+    });
+
+    setTimeout(() => {
+        clearInterval(intervalo) // ClearInterval, faz com o loop pare de gira em meio segundo.
+        btnGerarSenha.removeAttribute("disabled")
+    }, 500) // Meio segundo
+}
 
 btnGerarSenha.onclick = () => {
-    geraSenha();
+    efeitoGerarSenha()
+    btnGerarSenha.setAttribute("disabled","true")
+}
+
+senhaElemento.onclick = () => {
+
+    navigator.clipboard.writeText(senhaElemento.textContent)
+    senhaElemento.classList.add("copiada")
+
+    setTimeout(() => {
+        senhaElemento.classList.remove("copiada")
+    },1000);
 }
