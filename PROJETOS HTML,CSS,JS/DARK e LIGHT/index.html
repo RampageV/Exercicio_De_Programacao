@@ -15,22 +15,22 @@
 <body>
 
     <main id="container">
-        <form action="" id="login_form">
+        <form id="login_form">
             <div id="form_header">
                 <h1>Login</h1>
                 <i id="mode_icon" class="fa-solid fa-moon"></i>
+            </div>
 
-                
-
-                <a href="">
+            <div id="social_media">
+                <a href="https://www.instagram.com/erickpessoapinto/" target="_blank">
                     <img src="./img/instagram.png" alt="Icone-instagram">
                 </a>
 
-                <a href="">
+                <a href="https://github.com/erick-pessoa" target="_blank">
                     <img src="./img/github.png" alt="Icone-github">
                 </a>
 
-                <a href="">
+                <a href="https://www.facebook.com/Erick.P.Pinto/" target="_blank">
                     <img src="./img/facebook.png" alt="Icone-Facebook">
                 </a>
             </div>
@@ -49,7 +49,7 @@
 
                 <div class="input-box">
                     <label for="email">
-                        Name
+                        Email
                         <div class="input-field">
                             <i class="fa-solid fa-envelope"></i>
                             <input type="email" id="email" name="email">
@@ -59,14 +59,23 @@
 
                 <div class="input-box">
                     <label for="password">
-                        Name
+                        Password
                         <div class="input-field">
                             <i class="fa-solid fa-key"></i>
                             <input type="password" id="password" name="password">
                         </div>
                     </label>
+
+                    <div id="forgot-password">
+                        <a href="#">
+                            Forgot Your Password
+                        </a>
+                    </div>
                 </div>
             </div>
+            <button id="login_buttom">
+                Login
+            </button>
         </form>
     </main>
 
