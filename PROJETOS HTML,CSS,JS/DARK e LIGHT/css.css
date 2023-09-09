@@ -45,6 +45,8 @@
      -webkit-box-shadow: 27px 26px 11px -16px rgba(0, 0, 0, 1);
      -moz-box-shadow: 27px 26px 11px -16px rgba(0, 0, 0, 1);
      box-shadow: 27px 26px 11px -16px rgba(0, 0, 0, 1);
+     animation: dark-to-light 0.3s ease-in-out;
+     /*Animação de light para dark*/
  }
 
  #form_header {
@@ -146,9 +148,39 @@
  .dark#login_form {
      color: var(--color-light-50);
      background: var(--color-dark-100);
+     animation: light-to-dark 0.3s ease-in-out;
+     /*Animação de light para dark*/
  }
 
  .dark#login_form .input-field input,
  .dark#login_form .input-field i {
-   color: var(--color-light-50);
+     color: var(--color-light-50);
+ }
+
+ .dark #github {
+     background: white;
+     border-radius: 15px;
+     padding: 1px;
+ }
+
+ /*Animação para quando for mudar de dark para light e light para dark.*/
+ @keyframes dark-to-light {
+     0% {
+         background-color: var(--color-dark-100);
+     }
+
+     100% {
+         background-color: var(--color-light-50);
+     }
+ }
+
+ @keyframes light-to-dark {
+     0% {
+         background-color: var(--color-light-50);
+     }
+
+     100% {
+         background-color: var(--color-dark-100);
+     }
+
  }
