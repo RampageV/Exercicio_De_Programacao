@@ -8,13 +8,14 @@ const PopulaTabela = () => {
         $("#tblDados tbody").html("") // Limpando as linhas da minha tabela para escrever novas 
 
         dados.forEach(function (item) {
+
             //Template String
             $("#tblDados tbody").append(`<tr>
             <td>${item.ID}</td>
             <td>${item.Nome}</td>
             <td>${item.Sobrenome}</td>
             <td>${item.DtNascimento}</td>
-            <td>${item.Formação}</td>
+            <td>${item.Formacao}</td>
             </tr>`);
         });
     }
