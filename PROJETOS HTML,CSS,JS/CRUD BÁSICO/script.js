@@ -1,7 +1,6 @@
 var dados = []
 
-
-const PopulaTabela = () => {
+function PopulaTabela() {
 
     if (Array.isArray(dados)) {
 
@@ -11,24 +10,22 @@ const PopulaTabela = () => {
 
             //Template String
             $("#tblDados tbody").append(`<tr>
-            <td>${item.ID}</td>
-            <td>${item.Nome}</td>
-            <td>${item.Sobrenome}</td>
-            <td>${item.DtNascimento}</td>
-            <td>${item.Formacao}</td>
+                <td>${item.ID}</td>
+                <td>${item.Nome}</td>
+                <td>${item.Sobrenome}</td>
+                <td>${item.DtNascimento}</td>
+                <td>${item.Formacao}</td>
             </tr>`);
         });
     }
 }
 
 
-$(function () { // jQuery
+$(function(){
+     // EXECUTA AO CARREGAR DA TELA.
+     dados = JSON.parse(localStorage.getItem("__dados__"))
 
-    //Exercuta ao carregar a tela.
-    dados = JSON.parse(localStorage.getItem("__dados__")) // Convertendo para objeto.
-
-    if (dados) { // Se diferente de vazio, vai me retornar True.
-        PopulaTabela()
-    }
-
-});
+     if (dados) {
+ PopulaTabela();
+     }
+})
