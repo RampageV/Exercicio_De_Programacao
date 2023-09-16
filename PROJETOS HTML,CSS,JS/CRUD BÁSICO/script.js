@@ -19,13 +19,12 @@ function PopulaTabela() {
         });
     }
 }
+$(function () {
+    // EXECUTA AO CARREGAR DA TELA.
+    dados = JSON.parse(localStorage.getItem("__dados__"))
 
-
-$(function(){
-     // EXECUTA AO CARREGAR DA TELA.
-     dados = JSON.parse(localStorage.getItem("__dados__"))
-
-     if (dados) {
- PopulaTabela();
-     }
+    if (dados) {
+        PopulaTabela();
+    }
 })
+
