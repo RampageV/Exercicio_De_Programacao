@@ -22,11 +22,14 @@
         integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"
         defer>
     </script>
+
     <title>Crud Básico</title>
+
 </head>
 
 <body>
     <div class="container-fluid">
+
         <div class="row">
             <div class="col-md-12">
                 <h3>
@@ -38,7 +41,8 @@
 
         <div class="row">
             <div class="col-md-12">
-                <button type="button" class="btn btn-primary float-right" data-bs-toggle="modal" data-bs-target="modalRegistro">Adicionar Itens</button>
+                <button type="button" class="btn btn-primary float-right" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal">Adicionar Itens</button>
             </div>
         </div>
 
@@ -61,19 +65,55 @@
     </div>
 
     <!-- Modal -->
-    <div class="modal fade" id="modalRegistro" tabindex="-1" aria-labelledby="modalRegistroLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="modalRegistroLabel">Registros</h1>
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Registros !!</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="">Nome
+                                    <input type="text" id="txtNome" class="form-control" placeholder="Digite o nome...">
+                                </label>
+
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="">Sobrenome
+                                    <input type="text" id="txtSobrenome" class="form-control"
+                                        placeholder="Digite seu sobrenome...">
+                                </label>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="">Data de Nascimento
+                                    <input type="date" id="txtDtNascimento" class="form-control">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="">Formação
+                                    <input type="text" id="txtFormacao" class="form-control"
+                                        placeholder="Digite a formação...">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                    <button type="button" class="btn btn-primary">Salvar</button>
+                    <button type="button" id="btnSalvar" class="btn btn-primary">Salvar</button>
                 </div>
             </div>
         </div>

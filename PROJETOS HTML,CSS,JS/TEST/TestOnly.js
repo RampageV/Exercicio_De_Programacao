@@ -1,10 +1,9 @@
-function num(x) {
-    if (x == undefined) {
-        return 'Totalmente indefinido'
-    }
-    return x
-}
+const nome = document.getElementById("nome");
+const casa = document.getElementById("casa");
+const manda = document.getElementById("Manda");
 
-let h = 5;
-
-console.log(num(h))
+manda.addEventListener("click", () => {
+    console.log(nome.value)
+    casa.innerHTML = nome.value;
+    casa.style.color ="#ffcbdb"
+});
