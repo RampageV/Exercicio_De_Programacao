@@ -1,5 +1,28 @@
 var dados = [];
 
+// Evento para o botão Enter
+document.addEventListener("keypress",function(e){
+
+    if(e.key=="Enter"){
+        btnSalvar.click();
+}
+});
+
+
+const ApagarRegistro = (id) => {
+    let _confirm = confirm("Deseja realmente deletar esse registro ?");
+
+    if (_confirm) {
+        for (i = 0; i < dados.length; i++){
+            if(dados[i].ID == id){ //
+                dados.splice(i,1) // O I seria indece que gostaria de apagar e o 1 é a quantidade de elementos para ser apagado.
+            }
+        }
+        PopulaTabela() //Depois de delatar o elemento, precisa reescrever a tabela novamente, só que dessa vez sem os dados que foi apagado. 
+    }
+}
+
+
 function PopulaTabela() {
 
     if (Array.isArray(dados)) {
@@ -16,14 +39,15 @@ function PopulaTabela() {
                 <td>${item.Sobrenome}</td>
                 <td>${item.DtNascimento}</td>
                 <td>${item.Formacao}</td>
-                <td><button type="button" class="btn btn-primary">x</button></td>
-                <td><button type="button" class="btn btn-danger">x</button></td>
+                <td><button type="button" class="btn btn-primary"><i class="fa-regular fa-pen-to-square"></i></button></td>
+                <td><button type="button" class="btn btn-danger" onclick="ApagarRegistro(${item.ID})"><i class="fa-solid fa-trash" style="color: #ffffff;"></i></button></td>
             </tr>`);
         });
     }
 }
 
 $(function () {
+
     // EXECUTA AO CARREGAR DA TELA.
     dados = JSON.parse(localStorage.getItem("__dados__"))
 
@@ -46,20 +70,20 @@ $(function () {
         registro.Sobrenome = Sobrenome;
         registro.DtNascimento = DtNascimento;
         registro.Formacao = Formacao;
-        
-        registro.ID = dados.length+1;
-        
+
+        registro.ID = dados.length + 1;
+
         dados.push(registro)
-        
+
         alert("Registro Salvo com Sucesso !!")
-        
+
         /* Apagando o campo !! */
         $("#txtNome").val("")
         $("#txtSobrenome").val("")
         $("#txtDtNascimento").val("")
         $("#txtFormacao").val("")
 
-      PopulaTabela()
+        PopulaTabela()
     })
 
 })
