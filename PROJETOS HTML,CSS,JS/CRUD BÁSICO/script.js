@@ -1,27 +1,40 @@
 var dados = [];
 
 // Evento para o botão Enter
-document.addEventListener("keypress",function(e){
+document.addEventListener("keydown", function (e) {
+    const btn = document.querySelector("#btnSalvar")
 
-    if(e.key=="Enter"){
-        btnSalvar.click();
-}
+    if (e.key == "Enter") {
+        btn.click();
+    }
 });
 
-
-const ApagarRegistro = (id) => {
+function ApagarRegistro(id) {
     let _confirm = confirm("Deseja realmente deletar esse registro ?");
 
     if (_confirm) {
-        for (i = 0; i < dados.length; i++){
-            if(dados[i].ID == id){ //
-                dados.splice(i,1) // O I seria indece que gostaria de apagar e o 1 é a quantidade de elementos para ser apagado.
+        for (i = 0; i < dados.length; i++) {
+            if (dados[i].ID == id) { //
+                dados.splice(i, 1) // O I seria indece que gostaria de apagar e o 1 é a quantidade de elementos para ser apagado.
             }
         }
         PopulaTabela() //Depois de delatar o elemento, precisa reescrever a tabela novamente, só que dessa vez sem os dados que foi apagado. 
     }
 }
 
+const EditaRegistro = (id) => {
+    $("#exampleModal").modal("show"); // Abre a modal
+
+    /*Mostra os valores de todos os campos.*/
+    dados.forEach(function (item) {
+        if (item.ID == id) {
+            $("#txtNome").val(item.Nome)
+            $("#txtSobrenome").val(item.Sobrenome)
+            $("#txtDtNascimento").val(item.DtNascimento)
+            $("#txtFormacao").val(item.Formacao)
+        }
+    });
+}
 
 function PopulaTabela() {
 
@@ -39,7 +52,7 @@ function PopulaTabela() {
                 <td>${item.Sobrenome}</td>
                 <td>${item.DtNascimento}</td>
                 <td>${item.Formacao}</td>
-                <td><button type="button" class="btn btn-primary"><i class="fa-regular fa-pen-to-square"></i></button></td>
+                <td><button type="button" class="btn btn-primary" onclick="EditaRegistro(${item.ID})"><i class="fa-regular fa-pen-to-square"></i></button></td>
                 <td><button type="button" class="btn btn-danger" onclick="ApagarRegistro(${item.ID})"><i class="fa-solid fa-trash" style="color: #ffffff;"></i></button></td>
             </tr>`);
         });
