@@ -30,7 +30,7 @@ const EditaRegistro = (id) => {
         if (item.ID == id) {
             $("#txtNome").val(item.Nome)
             $("#txtSobrenome").val(item.Sobrenome)
-            $("#txtDtNascimento").val(item.DtNascimento)
+            $("#txtDtNascimento").val(item.DtNascimento.substr(6, 4) + "-" + item.DtNascimento.substr(3, 2) + "-" + item.DtNascimento.substr(0, 2)) // O componente só compreende o formato americano da data. E atravez do substr, a gente vai troca as posições para o componente conseguir ler o formato brasileiro.
             $("#txtFormacao").val(item.Formacao)
         }
     });
