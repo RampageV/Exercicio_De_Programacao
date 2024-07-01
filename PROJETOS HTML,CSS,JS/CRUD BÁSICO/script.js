@@ -81,7 +81,7 @@ $(function () {
 
 
         if (!_id || _id == "0") { // Se for nula, vazia ou igual a zero, vai da true. Significa que eu não tenho um id válido, então eu vou ter que cadastra um novo registro
-            
+
             let registro = {}
 
             registro.Nome = Nome;
@@ -93,18 +93,20 @@ $(function () {
             dados.push(registro)
 
         } else {
-            dados.forEach(function (item) { // Se eu tiver esse ID válido, significa que eu não tenho que incluir um novo registro e tenho que realiza a edição do registro que eu tenho no id amazenado.   
+            dados.forEach(function (item) {
                 if (item.ID == _id) {
-                    item.Nome = Nome
-                    item.Sobrenome = Sobrenome
-                    item.DtNascimento = DtNascimento
-                    item.Formacao = Formacao
+                    item.Nome = Nome;
+                    item.Sobrenome = Sobrenome;
+                    item.DtNascimento = DtNascimento;
+                    item.Formacao = Formacao;
                 }
-            });
+
+            })
         }
 
         alert("Registro Salvo com Sucesso !!")
-        
+
+
         /* Apagando o campo !! */
         $("#hdID").val("0") // Sem ele, toda vez que for editar mais de um registro, vai ficar com o valor do registro anterior.
         $("#txtNome").val("")
