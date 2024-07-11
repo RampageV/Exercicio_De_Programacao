@@ -72,11 +72,11 @@ font-weight: 700;
 
 #buttons-container #equal-btn{
   grid-column: span 2;
-  background-color:#bababa;
+  background-color:#999;
   color: white;
 }
 
 #buttons-container #equal-btn:hover{
   grid-column: span 2;
-  background: #999
+  background: #bababa
 }
