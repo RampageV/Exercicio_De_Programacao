@@ -31,6 +31,8 @@ buttons.forEach((btn) => {
 
 		if (+value >= 0 || value === ".") {
 			cal.addDigit(value)
+		} else {
+			console.log("Errado")
 		}
 	})
 })
