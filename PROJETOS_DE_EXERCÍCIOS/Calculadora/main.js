@@ -12,16 +12,44 @@ class Calculator {
 	addDigit(digit) {
 
 		//Check if current operation already has a dot
-		if(digit == "." && this.currentOperation.innerText.includes(".")){
+		if(digit === "." && this.currentOperationText.innerText.includes(".")){
             return;
 		}
-
 		this.currentOperation = digit
 		this.updateScreen()
 	}
 
-	updateScreen() {
-		this.currentOperationText.innerText += this.currentOperation
+	// process all calculator operation
+	processOperation(operation){
+      
+		// get current and previous value
+		let operationValue
+		const previous = +this.previousOperationText.innerText;
+		const current = +this.currentOperation.innerText
+
+		switch(operation){
+			case "+":
+                 operationValue = previous + current;
+				 this.updateScreen(operationValue, operation, current, previous)
+				break;
+			default:
+				return;	
+		}
+ 	}
+	// Change values of the calculator screen
+	updateScreen(operationValue = null, operation=null, current=null, previous=null, ) {
+
+		if(operationValue === null){
+			this.currentOperationText.innerText += this.currentOperation
+		}else{
+			// Check if value is zero, if it is just add current value
+			if(previous === 0){
+				operationValue = current
+			}
+
+			this.previousOperationText.innerText = `${operationValue}`
+
+		}
 	}
 }
 
@@ -33,6 +61,8 @@ buttons.forEach((btn) => {
 
 		if (+value >= 0 || value === ".") {
 			cal.addDigit(value)
-		} 
+		} else{
+			cal.processOperation(value)
+		}
 	})
 })
