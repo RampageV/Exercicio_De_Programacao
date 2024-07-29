@@ -1,4 +1,4 @@
-const previousOperationText = document.querySelector("#revious-operation")
+const previousOperationText = document.querySelector("#previous-operation")
 const currentOperationText = document.querySelector("#current-operation")
 const buttons = document.querySelectorAll("#buttons-container button") /*Selecionando todo os botoes*/
 
@@ -19,19 +19,31 @@ class Calculator {
 		this.updateScreen()
 	}
 
-	// process all calculator operation
+	// Process all calculator operation
 	processOperation(operation){
       
-		// get current and previous value
+		// Get current and previous value
 		let operationValue
-		const previous = +this.previousOperationText.innerText;
-		const current = +this.currentOperation.innerText
+		const previous = +this.previousOperationText.innerText.split(" ")[0];				
+		const current = +this.currentOperationText.innerText;
 
 		switch(operation){
 			case "+":
                  operationValue = previous + current;
 				 this.updateScreen(operationValue, operation, current, previous)
 				break;
+			case "-":
+				operationValue = previous - current;
+				this.updateScreen(operationValue, operation, current, previous)
+				 break;
+			case "/":
+			    operationValue = previous / current;
+				this.updateScreen(operationValue, operation,current, previous)
+				break;	
+			case "*":
+			    operationValue = previous * current;
+				this.updateScreen(operationValue, operation,current, previous)
+				break;	 	
 			default:
 				return;	
 		}
@@ -46,8 +58,9 @@ class Calculator {
 			if(previous === 0){
 				operationValue = current
 			}
-
-			this.previousOperationText.innerText = `${operationValue}`
+             // add current  value to previous
+			this.previousOperationText.innerText = `${operationValue} ${operation}`
+			this.currentOperationText.innerText = "";
 
 		}
 	}

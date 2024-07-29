@@ -25,7 +25,7 @@ def key_code(key):
         return False
     if key == keyboard.Key.page_down:
         attack(LIST_SKILL)
-        sleep(2)
+        sleep(1.3)
         revive()
           
 
